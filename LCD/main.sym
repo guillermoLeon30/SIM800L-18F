@@ -1,0 +1,162 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     @INTERRUPT_AREA
+018     @INTERRUPT_AREA
+019     @INTERRUPT_AREA
+01A     lcd_init.i
+01B-01E lcd_init.LCD_INIT_STRING
+01F     lcd_init.@SCRATCH1
+025-028 tratamiento.Vin
+029-02A @ITOF.P1
+029     tratamiento.@SCRATCH1
+02A     tratamiento.@SCRATCH2
+02B     tratamiento.@SCRATCH3
+02C     tratamiento.@SCRATCH4
+02D-030 @PRINTF_L32D_640FPFPFR.P1
+02D     @PSTRINGCN_640.P2
+02E     @PSTRINGCN_640.@SCRATCH1
+02F     @PSTRINGCN_640.@SCRATCH2
+031     @PRINTF_L32D_640FPFPFR.P1
+032     @PRINTF_L32D_640FPFPFR.@SCRATCH1
+033     @PRINTF_L32D_640FPFPFR.@SCRATCH2
+034     @PRINTF_L32D_640FPFPFR.@SCRATCH3
+035     @PRINTF_L32D_640FPFPFR.@SCRATCH4
+036     @PRINTF_L32D_640FPFPFR.@SCRATCH5
+037     @PRINTF_L32D_640FPFPFR.@SCRATCH6
+038     @PRINTF_L32D_640FPFPFR.@SCRATCH7
+039     @PRINTF_L32D_640FPFPFR.@SCRATCH8
+03A-03D @MULFF.P1
+03A-03D @DIV3232.P2
+03A-03D @FTOSD.P3
+03A     lcd_putc.c
+03A-03D @ADDFF.P1
+03B     lcd_gotoxy.x
+03B     @delay_ms1.P1
+03C     lcd_gotoxy.y
+03D     lcd_gotoxy.address
+03E-041 @ADDFF.P1
+03E-041 @DIV3232.P2
+03E-041 @MULFF.P3
+03E     lcd_gotoxy.@SCRATCH1
+03E     @FTOSD.@SCRATCH1
+03F     lcd_send_byte.address
+040     lcd_send_byte.n
+041     lcd_read_byte.low
+041     lcd_send_byte.@SCRATCH1
+042     lcd_read_byte.high
+042     lcd_send_nibble.n
+042     @MULFF.@SCRATCH1
+042     @ADDFF.@SCRATCH1
+042     @DIV3232.@SCRATCH1
+043     lcd_read_byte.@SCRATCH1
+043     @MULFF.@SCRATCH2
+043     @ADDFF.@SCRATCH2
+043     @DIV3232.@SCRATCH2
+044     @MULFF.@SCRATCH3
+044     @ADDFF.@SCRATCH3
+044     @DIV3232.@SCRATCH3
+045     @ADDFF.@SCRATCH4
+045     @DIV3232.@SCRATCH4
+046     @ADDFF.@SCRATCH5
+046     @DIV3232.@SCRATCH5
+047     @ADDFF.@SCRATCH6
+048     @ADDFF.@SCRATCH7
+049     @ADDFF.@SCRATCH8
+F81     lcd
+F8A     lcdlat
+F93     lcdtris
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2
+FBB     CCP_2_LOW
+FBC     CCP_2_HIGH
+FBE     CCP_1_LOW
+FBE     CCP_1
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P1
+FE9-FEA @WRITE_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @READ_PROGRAM_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+0000AE  @ITOF
+0000E6  lcd_read_nibble
+0000F2  lcd_read_byte
+00012E  lcd_send_nibble
+000146  lcd_send_byte
+000180  lcd_gotoxy
+0001A2  @delay_ms1
+0001CA  lcd_putc
+00021A  @MULFF
+00030C  @PSTRINGCN_640
+00032A  @ADDFF
+000596  @FTOSD
+0005D6  @DIV3232
+000664  @PRINTF_L32D_640FPFPFR
+00081E  tratamiento
+0008C6  @const656.call
+0008D8  lcd_init
+000998  @cinit1
+000998  MAIN
+0009AA  @cinit2
+
+Project Directory:
+    D:\PIC\LCD\
+
+Project Files:
+    main.c                                                  [17-sep-17 13:16  CRC=B6311CC8]
+    18f2550.h                                               [24-feb-17 16:23  CRC=A8B80131]
+    lcd.c                                                   [11-sep-17 23:19  CRC=D1A6378A]
+
+Source signature=02358D0D
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=FCA8
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC18F2550
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    Errors:      main.err
+    INHX32:      main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA
