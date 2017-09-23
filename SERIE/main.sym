@@ -1,0 +1,125 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     @INTERRUPT_AREA
+018     @INTERRUPT_AREA
+019     @INTERRUPT_AREA
+01A     dato
+01B     MAIN.cont
+01C     @PRINTF_D_9600_31766_31767.P1
+01C     lcd_init.i
+01C     MAIN.@SCRATCH1
+01D-020 lcd_init.LCD_INIT_STRING
+01D     @PRINTF_D_9600_31766_31767.P1
+01E     @PRINTF_D_9600_31766_31767.@SCRATCH1
+01F     @PRINTF_D_9600_31766_31767.@SCRATCH2
+020     @PRINTF_D_9600_31766_31767.@SCRATCH3
+021     lcd_init.@SCRATCH1
+021     @PRINTF_D_9600_31766_31767.@SCRATCH4
+022     @DIV88.P1
+023     @DIV88.P1
+024     @DIV88.@SCRATCH1
+027     lcd_putc.c
+028     lcd_gotoxy.x
+028     @delay_ms1.P1
+029     lcd_gotoxy.y
+02A     lcd_gotoxy.address
+02B     lcd_gotoxy.@SCRATCH1
+02C     lcd_send_byte.address
+02D     lcd_send_byte.n
+02E     lcd_read_byte.low
+02E     lcd_send_byte.@SCRATCH1
+02F     lcd_send_nibble.n
+02F     lcd_read_byte.high
+030     lcd_read_byte.@SCRATCH1
+F81     lcd
+F8A     lcdlat
+F93     lcdtris
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2
+FBB     CCP_2_LOW
+FBC     CCP_2_HIGH
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P1
+FE9-FEA @WRITE_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P3
+FE9-FEA @READ_PROGRAM_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+0000AE  lcd_read_nibble
+0000BA  lcd_read_byte
+0000F6  lcd_send_nibble
+00010E  lcd_send_byte
+000148  lcd_gotoxy
+00016A  @delay_ms1
+000192  lcd_putc
+0001E2  tratamiento
+0001FC  lcd_init
+0002B8  @DIV88
+0002E0  @PRINTF_D_9600_31766_31767
+000394  @cinit1
+000394  MAIN
+0003B4  @cinit2
+
+Project Directory:
+    D:\PIC\SIM800L-18F\SERIE\
+
+Project Files:
+    main.c                                                  [23-sep-17 12:09  CRC=E169BDE3]
+    18f2550.h                                               [24-feb-17 16:23  CRC=A8B80131]
+    lcd.c                                                   [11-sep-17 23:19  CRC=D1A6378A]
+
+Source signature=2D6E2E28
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=86E1
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC18F2550
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    Errors:      main.err
+    INHX32:      main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA
