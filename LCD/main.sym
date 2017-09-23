@@ -127,12 +127,12 @@ ROM Allocation:
 0009AA  @cinit2
 
 Project Directory:
-    D:\PIC\LCD\
+    C:\Users\Jaime\Documents\GitHub\SIM800L-18F\LCD\
 
 Project Files:
-    main.c                                                  [17-sep-17 13:16  CRC=B6311CC8]
-    18f2550.h                                               [24-feb-17 16:23  CRC=A8B80131]
-    lcd.c                                                   [11-sep-17 23:19  CRC=D1A6378A]
+    main.c                                                  [23-sep-17 13:45  CRC=B6311CC8]
+    18f2550.h                                               [23-sep-17 13:45  CRC=A8B80131]
+    lcd.c                                                   [23-sep-17 13:45  CRC=D1A6378A]
 
 Source signature=02358D0D
 Program memory checksum=0000
