@@ -32,12 +32,12 @@
 031     comp
 032-033 @sprintf_string
 034     MAIN.cont
-035-036 strcmp.s1
 035     lcd_init.i
+035-036 strcmp.s1
 035     initSim800.@SCRATCH1
 035     @PSTRINGC_9600_31766_31767.@SCRATCH1
-035     @PSTRINGC_735.@SCRATCH1
 035     MAIN.@SCRATCH1
+035     @PSTRINGC_735.@SCRATCH1
 036-039 lcd_init.LCD_INIT_STRING
 036     @PSTRINGC_9600_31766_31767.@SCRATCH2
 036     @PSTRINGC_735.@SCRATCH2
@@ -91,39 +91,39 @@ ROM Allocation:
 000208  tratamiento
 000238  @const762.call
 00023C  @const764.call
-000246  @const770.call
-000250  @const771.call
-00025C  @const772.call
-000266  @const773.call
-000272  @const774.call
-00028A  @const775.call
-0002A4  @const776.call
-0002AC  @const777.call
-0002B4  lcd_init
-000370  strcmp
-0003E4  @PSTRINGC_9600_31766_31767
-000406  @PSTRINGC_735
-000432  initSim800
-0004CC  @PUTCHARI_BIU_1
-0004D4  MAIN
-0004D4  @cinit1
-0004F8  @cinit2
+000244  @const769.call
+00024E  @const771.call
+00025A  @const772.call
+000264  @const773.call
+000270  @const774.call
+000288  @const775.call
+0002A2  @const776.call
+0002AA  @const777.call
+0002B2  lcd_init
+00036E  strcmp
+0003E2  @PSTRINGC_9600_31766_31767
+000404  initSim800
+00047E  @PSTRINGC_735
+0004AA  @PUTCHARI_BIU_1
+0004B2  MAIN
+0004B2  @cinit1
+0004D6  @cinit2
 
 Project Directory:
-    C:\Users\Jaime\Documents\GitHub\SIM800L-18F\SERIE\
+    D:\PIC\SIM800L-18F\SERIE\
 
 Project Files:
-    main.c                                                  [24-sep-17 14:20  CRC=61B0380A]
-    18f2550.h                                               [23-sep-17 13:45  CRC=A8B80131]
-    string.h                                                [24-sep-17 12:05  CRC=C4814297]
-    stddef.h                                                [24-sep-17 12:05  CRC=897CEC6C]
-    ctype.h                                                 [24-sep-17 12:05  CRC=2D1F019F]
-    lcd.c                                                   [23-sep-17 13:45  CRC=D1A6378A]
+    main.c                                                  [24-sep-17 16:15  CRC=7E777861]
+    18f2550.h                                               [24-feb-17 16:23  CRC=A8B80131]
+    string.h                                                [26-mar-15 12:34  CRC=C4814297]
+    stddef.h                                                [05-sep-14 11:47  CRC=897CEC6C]
+    ctype.h                                                 [03-ene-08 14:55  CRC=2D1F019F]
+    lcd.c                                                   [11-sep-17 23:19  CRC=D1A6378A]
 
-Source signature=28D1D8F1
+Source signature=45991948
 Program memory checksum=0000
 Program memory CRC=0000
-Hex file CRC=1F59
+Hex file CRC=9798
 
 Units:
     main (main)

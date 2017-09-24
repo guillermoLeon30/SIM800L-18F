@@ -32,19 +32,14 @@ tratamiento(){
 }	
 
 void initSim800(){
-	disable_interrupts(global); // RS232 OFF
 	comp = strcmp(ok, dato);
 	while(strcmp(ok, dato) != 0){
 		printf("AT\r");
-		delay_ms(100);
-		gets(dato);
+		gets(dato); //Lee hasta <CR>
 		comp = strcmp(ok, dato);
 	}
-	enable_interrupts(global);		//Activa interrupción en la recepción
-	lcd_gotoxy(1,1);
-	printf(lcd_putc, "TODO BIEN");
-
-	
+	printf("AT+IPR\r");
+	delay_ms(1000);
 }
 
 void main(){
@@ -52,15 +47,14 @@ void main(){
 	set_tris_c(0b10111111);	//RC7/Rx entrada, RC6/Tx salida	
 	//setup_uart(uart_autodetect);	//Activa ciclo de auto detección de baudios
 	lcd_init();
+	initSim800();
 	enable_interrupts(INT_RDA);		//Activa interrupción en la recepción
 	enable_interrupts(global);		//Habilita interrupciones
 	
-	initSim800();
-	
-	lcd_gotoxy(1,1);
-	printf(lcd_putc, "AT+CMGS=?");
-	printf("AT+CMGS=?\r"); //Tiene que responder OK
-	delay_ms(1000);
+	//lcd_gotoxy(1,1);
+	//printf(lcd_putc, "AT+CMGS=?");
+	//printf("AT+CMGS=?\r"); //Tiene que responder OK
+	//delay_ms(1000);
 
 	lcd_gotoxy(1,1);
 	printf(lcd_putc, "AT+CMGF=1");
