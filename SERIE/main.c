@@ -22,11 +22,11 @@ char c;
 #int_rda			//Vector de interrupción al recibir por el UART
 tratamiento()
 {	
-	gets(dato);	//Lee el dato recibido hasta el enter<CR> (13)
-	//c = getc();
-	lcd_putc('\f');
-	printf(lcd_putc, "%s", dato);
-	//printf(lcd_putc, "%d", c);
+	//gets(dato);	//Lee el dato recibido hasta el enter<CR> (13)
+	c = getc();
+	lcd_gotoxy(1,2);
+	//printf(lcd_putc, "%s", dato);
+	printf(lcd_putc, "%d", c);
 }	
 
 void main(){
@@ -37,14 +37,26 @@ void main(){
 	enable_interrupts(INT_RDA);		//Activa interrupción en la recepción
 	enable_interrupts(global);		//Habilita interrupciones
 	
-	printf("AT+CMGS=?\r\n"); //Tiene que responder OK
+	lcd_gotoxy(1,1);
+	printf(lcd_putc, "AT+CMGS=?");
+	printf("AT+CMGS=?\r"); //Tiene que responder OK
 	delay_ms(1000);
-	printf("AT+CMGF=1\r\n"); //Modo texto
+
+	lcd_gotoxy(1,1);
+	printf(lcd_putc, "AT+CMGF=1");
+	printf("AT+CMGF=1\r"); //Modo texto
 	delay_ms(1000);
-	printf("AT+CMGS=\"+593959984110\"\r\n"); //Numero de telefono
+
+	lcd_gotoxy(1,1);
+	printf(lcd_putc, "AT+CMGS=\"+593959984110\"");
+	printf("AT+CMGS=\"+593959984110\"\r"); //Numero de telefono
 	delay_ms(1000);
+
+	lcd_gotoxy(1,1);
+	printf(lcd_putc, "Prueba");
 	printf("Prueba"); //Mensaje
 	putc(26); // CTRL+Z
+	putc('\r');
 	delay_ms(1000);
 
 	while(1)
