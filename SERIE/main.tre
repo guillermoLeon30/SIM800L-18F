@@ -1,5 +1,5 @@
 ÀÄmain
-   ÃÄMAIN  0/346  Ram=2
+   ÃÄMAIN  0/664  Ram=2
    ³  ÃÄ@cinit1  (Inline)  Ram=0
    ³  ÃÄlcd_init  0/188  Ram=6
    ³  ³  ÃÄ@delay_ms1  0/40  Ram=1
@@ -13,6 +13,8 @@
    ³  ³     ³  ÀÄlcd_read_nibble  0/12  Ram=0
    ³  ³     ÃÄlcd_send_nibble  0/24  Ram=1
    ³  ³     ÀÄlcd_send_nibble  0/24  Ram=1
+<<<<<<< HEAD
+=======
    ³  ÃÄinitSim800  0/122  Ram=1
    ³  ³  ÃÄstrcmp  0/116  Ram=5
    ³  ³  ÃÄstrcmp  0/116  Ram=5
@@ -20,6 +22,7 @@
    ³  ³  ÃÄ@delay_ms1  0/40  Ram=1
    ³  ³  ÃÄstrcmp  0/116  Ram=5
    ³  ³  ÀÄ@PSTRINGC_9600_31766_31767  0/34  Ram=2
+>>>>>>> 7963a1185f8a5bede6fc63296692cdd1858e9afc
    ³  ÃÄlcd_gotoxy  0/34  Ram=4
    ³  ³  ÀÄlcd_send_byte  0/58  Ram=3
    ³  ³     ÀÄ*
@@ -37,30 +40,47 @@
    ³  ³     ÀÄlcd_send_byte  0/58  Ram=3
    ³  ³        ÀÄ*
    ³  ÃÄ@PSTRINGC_9600_31766_31767  0/34  Ram=2
+   ³  ÃÄlcd_gotoxy  0/34  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGR_735  0/36  Ram=2
+   ³  ³  ÀÄlcd_putc  0/80  Ram=1
+   ³  ³     ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/34  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGR_735  0/36  Ram=2
+   ³  ³  ÀÄ*
    ³  ÃÄ@delay_ms1  0/40  Ram=1
    ³  ÃÄlcd_gotoxy  0/34  Ram=4
    ³  ³  ÀÄ*
    ³  ÃÄ@PSTRINGC_735  0/44  Ram=2
    ³  ³  ÀÄ*
    ³  ÃÄ@PSTRINGC_9600_31766_31767  0/34  Ram=2
+   ³  ÃÄlcd_gotoxy  0/34  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGR_735  0/36  Ram=2
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/34  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGR_735  0/36  Ram=2
+   ³  ³  ÀÄ*
    ³  ÃÄ@delay_ms1  0/40  Ram=1
    ³  ÃÄlcd_gotoxy  0/34  Ram=4
    ³  ³  ÀÄ*
    ³  ÃÄ@PSTRINGC_735  0/44  Ram=2
    ³  ³  ÀÄ*
    ³  ÃÄ@PSTRINGC_9600_31766_31767  0/34  Ram=2
-   ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ÃÄ@PUTCHARI_BIU_1  0/10  Ram=0
    ³  ÃÄlcd_gotoxy  0/34  Ram=4
    ³  ³  ÀÄ*
-   ³  ÃÄ@PSTRINGC_735  0/44  Ram=2
+   ³  ÃÄ@PSTRINGR_735  0/36  Ram=2
    ³  ³  ÀÄ*
-   ³  ÃÄ@PSTRINGC_9600_31766_31767  0/34  Ram=2
-   ³  ÃÄ@PUTCHARI_BIU_1  0/8  Ram=0
-   ³  ÃÄ@PUTCHARI_BIU_1  0/8  Ram=0
+   ³  ÃÄlcd_gotoxy  0/34  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGR_735  0/36  Ram=2
+   ³  ³  ÀÄ*
    ³  ÀÄ@delay_ms1  0/40  Ram=1
    ÀÄtratamiento  0/48  Ram=0
       ÃÄlcd_gotoxy  0/34  Ram=4
       ³  ÀÄ*
-      ÀÄ@PSTRINGR_735  0/38  Ram=2
-         ÀÄlcd_putc  0/80  Ram=1
-            ÀÄ*
+      ÀÄ@PSTRINGR_735  0/36  Ram=2
+         ÀÄ*

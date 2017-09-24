@@ -33,22 +33,23 @@
 032-033 @sprintf_string
 034     MAIN.cont
 035     lcd_init.i
+<<<<<<< HEAD
+=======
 035-036 strcmp.s1
 035     initSim800.@SCRATCH1
+>>>>>>> 7963a1185f8a5bede6fc63296692cdd1858e9afc
 035     @PSTRINGC_9600_31766_31767.@SCRATCH1
 035     MAIN.@SCRATCH1
 035     @PSTRINGC_735.@SCRATCH1
 036-039 lcd_init.LCD_INIT_STRING
 036     @PSTRINGC_9600_31766_31767.@SCRATCH2
 036     @PSTRINGC_735.@SCRATCH2
-037-038 strcmp.s2
-039     strcmp.@SCRATCH1
 03A     lcd_init.@SCRATCH1
 041     @PSTRINGR_735.@SCRATCH1
 042     @PSTRINGR_735.@SCRATCH2
 043     lcd_putc.c
-044     lcd_gotoxy.x
 044     @delay_ms1.P1
+044     lcd_gotoxy.x
 045     lcd_gotoxy.y
 046     lcd_gotoxy.address
 047     lcd_gotoxy.@SCRATCH1
@@ -56,28 +57,28 @@
 049     lcd_send_byte.n
 04A     lcd_read_byte.low
 04A     lcd_send_byte.@SCRATCH1
-04B     lcd_send_nibble.n
 04B     lcd_read_byte.high
+04B     lcd_send_nibble.n
 04C     lcd_read_byte.@SCRATCH1
 F81     lcd
 F8A     lcdlat
 F93     lcdtris
 FB4.6   C1OUT
 FB4.7   C2OUT
-FBB     CCP_2
 FBB     CCP_2_LOW
+FBB     CCP_2
 FBC     CCP_2_HIGH
 FBE     CCP_1
 FBE     CCP_1_LOW
 FBF     CCP_1_HIGH
-FE1-FE2 @WRITE_PACKED_MEMORY.P1
-FE1-FE2 @READ_PACKED_MEMORY.P2
-FE9-FEA @WRITE_PROGRAM_MEMORY.P1
-FE9-FEA @WRITE_PACKED_MEMORY.P2
-FE9-FEA @READ_PACKED_MEMORY.P3
-FE9-FEA @READ_PROGRAM_MEMORY.P4
-FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
-FF6-FF8 @READ_PROGRAM_MEMORY.P2
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P1
+FE9-FEA @READ_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P3
+FE9-FEA @WRITE_PACKED_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
 
 ROM Allocation:
 0000AE  lcd_read_nibble
@@ -88,6 +89,25 @@ ROM Allocation:
 00016A  @delay_ms1
 000192  lcd_putc
 0001E2  @PSTRINGR_735
+<<<<<<< HEAD
+000206  tratamiento
+000236  @const762.call
+00023A  @const764.call
+000242  @const766.call
+000246  @const774.call
+000250  @const776.call
+00025C  @const779.call
+000274  @const780.call
+00028E  @const783.call
+000296  @const784.call
+00029E  lcd_init
+00035A  @PSTRINGC_735
+000386  @PSTRINGC_9600_31766_31767
+0003A8  @PUTCHARI_BIU_1
+0003B2  MAIN
+0003B2  @cinit1
+0003D6  @cinit2
+=======
 000208  tratamiento
 000238  @const762.call
 00023C  @const764.call
@@ -108,11 +128,25 @@ ROM Allocation:
 0004B2  MAIN
 0004B2  @cinit1
 0004D6  @cinit2
+>>>>>>> 7963a1185f8a5bede6fc63296692cdd1858e9afc
 
 Project Directory:
     D:\PIC\SIM800L-18F\SERIE\
 
 Project Files:
+<<<<<<< HEAD
+    main.c                                                  [24-sep-17 17:53  CRC=A23D3376]
+    18f2550.h                                               [23-sep-17 13:45  CRC=A8B80131]
+    string.h                                                [24-sep-17 12:05  CRC=C4814297]
+    stddef.h                                                [24-sep-17 12:05  CRC=897CEC6C]
+    ctype.h                                                 [24-sep-17 12:05  CRC=2D1F019F]
+    lcd.c                                                   [23-sep-17 13:45  CRC=D1A6378A]
+
+Source signature=695ED45D
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=ACAD
+=======
     main.c                                                  [24-sep-17 16:15  CRC=7E777861]
     18f2550.h                                               [24-feb-17 16:23  CRC=A8B80131]
     string.h                                                [26-mar-15 12:34  CRC=C4814297]
@@ -124,6 +158,7 @@ Source signature=45991948
 Program memory checksum=0000
 Program memory CRC=0000
 Hex file CRC=9798
+>>>>>>> 7963a1185f8a5bede6fc63296692cdd1858e9afc
 
 Units:
     main (main)

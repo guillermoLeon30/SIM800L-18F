@@ -1,18 +1,40 @@
 
+<<<<<<< HEAD
+ROM used:   1606/32768 (5%)
+            1606/32768 (5%) including unused fragments
+
+            0.9 Average locations per line
+            6.1 Average locations per statement
+=======
 ROM used:   1544/32768 (5%)
             1544/32768 (5%) including unused fragments
 
             0.9 Average locations per line
             6.2 Average locations per statement
+>>>>>>> 7963a1185f8a5bede6fc63296692cdd1858e9afc
 
 RAM used:   54/2048 (3%) at main() level
             77/2048 (4%) worst case
 
+<<<<<<< HEAD
+Stack used: 7 worst case (0 in main + 7 for interrupts)
+=======
 Stack used: 10 worst case (4 in main + 6 for interrupts)
+>>>>>>> 7963a1185f8a5bede6fc63296692cdd1858e9afc
 Stack size: 31
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
+<<<<<<< HEAD
+  114    51  19  main.c
+  779     0   0  18f2550.h
+  435   129  49  string.h
+   32     0   0  stddef.h
+   28     0   0  ctype.h
+  456    84  32  lcd.c
+----- -----
+ 1844   264 Total
+=======
    81    36  14  main.c
   779     0   0  18f2550.h
   435   129  52  string.h
@@ -21,10 +43,10 @@ Lines Stmts  %   Files
   456    84  34  lcd.c
 ----- -----
  1811   249 Total
+>>>>>>> 7963a1185f8a5bede6fc63296692cdd1858e9afc
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
-0    116   4    5    243  7.0  strcmp
 0     40   1    1             @delay_ms1
 0     60   2    3    596  5.9  lcd_read_byte
 0     12   0    0     59  4.2  lcd_read_nibble
@@ -32,6 +54,37 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0     58   2    3    460  4.7  lcd_send_byte
 0    188   6    6    814  7.2  lcd_init
 0     34   1    4    208  6.3  lcd_gotoxy
+<<<<<<< HEAD
+0     80   2    1    354  4.7  lcd_putc
+0     10   0    0             @PUTCHARI_BIU_1
+0     48   1    0     80  1.5  tratamiento
+0     36   1    2             @PSTRINGR_735
+0      4   0    0             @const762
+0     34   1    2             @PSTRINGC_9600_31766_31767
+0      8   0    0             @const764
+0      4   0    0             @const766
+0    664  21    2   1268  2.9  MAIN
+0     10   0    0             @const774
+0     44   1    2             @PSTRINGC_735
+0     12   0    0             @const776
+0     24   1    0             @const779
+0     26   1    0             @const780
+0      8   0    0             @const783
+0      8   0    0             @const784
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               9
+    Statements              264
+    Comments                421
+    Volume (V)              6027
+    Difficulty (D)          37.3
+    Effort to implement (E) 225015
+    Time to implement (T)   3 hours, 28 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   8
+    Maintainability (MI)    36
+=======
 0     80   3    1    354  4.7  lcd_putc
 0      8   0    0             @PUTCHARI_BIU_1
 0     48   2    0     80  1.5  tratamiento
@@ -63,13 +116,18 @@ Program metrics:
     Est Delivered Bugs (B)  1
     Cyclomatic Complexity   10
     Maintainability (MI)    88
+>>>>>>> 7963a1185f8a5bede6fc63296692cdd1858e9afc
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00002     4  0  
 00004-00006     0  4  
 00008-000AC   166  0  
+<<<<<<< HEAD
+000AE-07FFE  1436  31158  
+=======
 000AE-07FFE  1374  31220  
+>>>>>>> 7963a1185f8a5bede6fc63296692cdd1858e9afc
 
 
 
