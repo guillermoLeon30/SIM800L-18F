@@ -1,4 +1,5 @@
 #include <18f2550.h>	//Tipo de procesador
+
 #use delay(clock=4000000)			//Frecuencia de trabajo
 
 #fuses 	EC_IO			//Oscilador externo, RA6=E/S,PLL OFF (CONFIG1H)	
@@ -15,14 +16,17 @@
 
 #use fast_io (C)
 
-char dato;		//Variable para almacena el dato recibido
+char dato[10];		//Variable para almacena el dato recibido
+char c;
+
 #int_rda			//Vector de interrupción al recibir por el UART
 tratamiento()
 {	
-	
-	dato=getc();	//Lee el dato recibido
+	gets(dato);	//Lee el dato recibido hasta el enter<CR> (13)
+	//c = getc();
 	lcd_putc('\f');
-	printf(lcd_putc, "%c", dato);
+	printf(lcd_putc, "%s", dato);
+	//printf(lcd_putc, "%d", c);
 }	
 
 void main(){
@@ -32,11 +36,19 @@ void main(){
 	lcd_init();
 	enable_interrupts(INT_RDA);		//Activa interrupción en la recepción
 	enable_interrupts(global);		//Habilita interrupciones
+	
+	printf("AT+CMGS=?\r\n"); //Tiene que responder OK
+	delay_ms(1000);
+	printf("AT+CMGF=1\r\n"); //Modo texto
+	delay_ms(1000);
+	printf("AT+CMGS=\"+593959984110\"\r\n"); //Numero de telefono
+	delay_ms(1000);
+	printf("Prueba"); //Mensaje
+	putc(26); // CTRL+Z
+	delay_ms(1000);
+
 	while(1)
 	{	
-		cont++;
-		printf("%d", cont);
-		//putc('A');		//Transmite el caracter
-		delay_ms(1000);	//Temporiza 1 segundo
+		
 	}
 }
