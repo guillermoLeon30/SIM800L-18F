@@ -25,50 +25,59 @@
 017     @INTERRUPT_AREA
 018     @INTERRUPT_AREA
 019     @INTERRUPT_AREA
-01A-023 dato
-024     c
-025-026 @sprintf_string
-027     MAIN.cont
-028     lcd_init.i
-028     MAIN.@SCRATCH1
-028     @PSTRINGC_9600_31766_31767.@SCRATCH1
-029-02C lcd_init.LCD_INIT_STRING
-029     @PSTRINGC_9600_31766_31767.@SCRATCH2
-02D     lcd_init.@SCRATCH1
-033     @PSTRINGR_640.@SCRATCH1
-034     @PSTRINGR_640.@SCRATCH2
-035     lcd_putc.c
-036     lcd_gotoxy.x
-036     @delay_ms1.P1
-037     lcd_gotoxy.y
-038     lcd_gotoxy.address
-039     lcd_gotoxy.@SCRATCH1
-03A     lcd_send_byte.address
-03B     lcd_send_byte.n
-03C     lcd_read_byte.low
-03C     lcd_send_byte.@SCRATCH1
-03D     lcd_send_nibble.n
-03D     lcd_read_byte.high
-03E     lcd_read_byte.@SCRATCH1
+01A-01B strtok.save
+01C-025 dato
+026-02F ok
+030     c
+031     comp
+032-033 @sprintf_string
+034     MAIN.cont
+035-036 strcmp.s1
+035     lcd_init.i
+035     initSim800.@SCRATCH1
+035     @PSTRINGC_9600_31766_31767.@SCRATCH1
+035     @PSTRINGC_735.@SCRATCH1
+035     MAIN.@SCRATCH1
+036-039 lcd_init.LCD_INIT_STRING
+036     @PSTRINGC_9600_31766_31767.@SCRATCH2
+036     @PSTRINGC_735.@SCRATCH2
+037-038 strcmp.s2
+039     strcmp.@SCRATCH1
+03A     lcd_init.@SCRATCH1
+041     @PSTRINGR_735.@SCRATCH1
+042     @PSTRINGR_735.@SCRATCH2
+043     lcd_putc.c
+044     lcd_gotoxy.x
+044     @delay_ms1.P1
+045     lcd_gotoxy.y
+046     lcd_gotoxy.address
+047     lcd_gotoxy.@SCRATCH1
+048     lcd_send_byte.address
+049     lcd_send_byte.n
+04A     lcd_read_byte.low
+04A     lcd_send_byte.@SCRATCH1
+04B     lcd_send_nibble.n
+04B     lcd_read_byte.high
+04C     lcd_read_byte.@SCRATCH1
 F81     lcd
 F8A     lcdlat
 F93     lcdtris
 FB4.6   C1OUT
 FB4.7   C2OUT
-FBB     CCP_2_LOW
 FBB     CCP_2
+FBB     CCP_2_LOW
 FBC     CCP_2_HIGH
 FBE     CCP_1
 FBE     CCP_1_LOW
 FBF     CCP_1_HIGH
 FE1-FE2 @WRITE_PACKED_MEMORY.P1
 FE1-FE2 @READ_PACKED_MEMORY.P2
-FE9-FEA @WRITE_PACKED_MEMORY.P1
-FE9-FEA @WRITE_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P1
+FE9-FEA @WRITE_PACKED_MEMORY.P2
 FE9-FEA @READ_PACKED_MEMORY.P3
 FE9-FEA @READ_PROGRAM_MEMORY.P4
-FF6-FF8 @READ_PROGRAM_MEMORY.P1
-FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
 
 ROM Allocation:
 0000AE  lcd_read_nibble
@@ -78,31 +87,49 @@ ROM Allocation:
 000148  lcd_gotoxy
 00016A  @delay_ms1
 000192  lcd_putc
-0001E2  @PSTRINGR_640
+0001E2  @PSTRINGR_735
 000208  tratamiento
-000234  @const668.call
-000240  @const670.call
-00024C  @const671.call
-000266  @const672.call
-00026E  lcd_init
-00032A  @PSTRINGC_9600_31766_31767
-00034C  @PUTCHARI_BIU_1
-000356  MAIN
-000356  @cinit1
-00037A  @cinit2
+000238  @const762.call
+00023C  @const764.call
+000246  @const770.call
+000250  @const771.call
+00025C  @const772.call
+000266  @const773.call
+000272  @const774.call
+00028A  @const775.call
+0002A4  @const776.call
+0002AC  @const777.call
+0002B4  lcd_init
+000370  strcmp
+0003E4  @PSTRINGC_9600_31766_31767
+000406  @PSTRINGC_735
+000432  initSim800
+0004CC  @PUTCHARI_BIU_1
+0004D4  MAIN
+0004D4  @cinit1
+0004F8  @cinit2
 
 Project Directory:
-    D:\PIC\SIM800L-18F\SERIE\
+    C:\Users\Jaime\Documents\GitHub\SIM800L-18F\SERIE\
 
 Project Files:
+<<<<<<< HEAD
     main.c                                                  [24-sep-17 12:09  CRC=8FB155D0]
     18f2550.h                                               [24-feb-17 16:23  CRC=A8B80131]
     lcd.c                                                   [11-sep-17 23:19  CRC=D1A6378A]
+=======
+    main.c                                                  [24-sep-17 14:20  CRC=61B0380A]
+    18f2550.h                                               [23-sep-17 13:45  CRC=A8B80131]
+    string.h                                                [24-sep-17 12:05  CRC=C4814297]
+    stddef.h                                                [24-sep-17 12:05  CRC=897CEC6C]
+    ctype.h                                                 [24-sep-17 12:05  CRC=2D1F019F]
+    lcd.c                                                   [23-sep-17 13:45  CRC=D1A6378A]
+>>>>>>> d2785c6c4ccee8bfc8f6528921224d0bb4f350dd
 
-Source signature=DBB5C615
+Source signature=28D1D8F1
 Program memory checksum=0000
 Program memory CRC=0000
-Hex file CRC=70D1
+Hex file CRC=1F59
 
 Units:
     main (main)

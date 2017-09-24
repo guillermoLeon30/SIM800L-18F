@@ -1,4 +1,5 @@
 #include <18f2550.h>	//Tipo de procesador
+#include <string.h>
 
 #use delay(clock=4000000)			//Frecuencia de trabajo
 
@@ -17,17 +18,34 @@
 #use fast_io (C)
 
 char dato[10];		//Variable para almacena el dato recibido
+char ok[10]="OK\r";
 char c;
+int comp;
 
 #int_rda			//Vector de interrupción al recibir por el UART
-tratamiento()
-{	
+tratamiento(){	
 	gets(dato);	//Lee el dato recibido hasta el enter<CR> (13)
 	//c = getc();
-	lcd_putc('\f');
+	lcd_gotoxy(1,2);
 	printf(lcd_putc, "%s", dato);
 	//printf(lcd_putc, "%d", c);
 }	
+
+void initSim800(){
+	disable_interrupts(global); // RS232 OFF
+	comp = strcmp(ok, dato);
+	while(strcmp(ok, dato) != 0){
+		printf("AT\r");
+		delay_ms(100);
+		gets(dato);
+		comp = strcmp(ok, dato);
+	}
+	enable_interrupts(global);		//Activa interrupción en la recepción
+	lcd_gotoxy(1,1);
+	printf(lcd_putc, "TODO BIEN");
+
+	
+}
 
 void main(){
 	int cont=0;
@@ -37,14 +55,28 @@ void main(){
 	enable_interrupts(INT_RDA);		//Activa interrupción en la recepción
 	enable_interrupts(global);		//Habilita interrupciones
 	
-	printf("AT+CMGS=?\r\n"); //Tiene que responder OK
+	initSim800();
+	
+	lcd_gotoxy(1,1);
+	printf(lcd_putc, "AT+CMGS=?");
+	printf("AT+CMGS=?\r"); //Tiene que responder OK
 	delay_ms(1000);
-	printf("AT+CMGF=1\r\n"); //Modo texto
+
+	lcd_gotoxy(1,1);
+	printf(lcd_putc, "AT+CMGF=1");
+	printf("AT+CMGF=1\r"); //Modo texto
 	delay_ms(1000);
-	printf("AT+CMGS=\"+593959984110\"\r\n"); //Numero de telefono
+
+	lcd_gotoxy(1,1);
+	printf(lcd_putc, "AT+CMGS=\"+593959984110\"");
+	printf("AT+CMGS=\"+593959984110\"\r"); //Numero de telefono
 	delay_ms(1000);
+
+	lcd_gotoxy(1,1);
+	printf(lcd_putc, "Prueba");
 	printf("Prueba"); //Mensaje
 	putc(26); // CTRL+Z
+	putc('\r');
 	delay_ms(1000);
 
 	while(1)

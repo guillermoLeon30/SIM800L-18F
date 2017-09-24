@@ -1,63 +1,75 @@
 
-ROM used:   1052/32768 (3%)
-            1052/32768 (3%) including unused fragments
+ROM used:   1578/32768 (5%)
+            1578/32768 (5%) including unused fragments
 
-            0.8 Average locations per line
-            10.3 Average locations per statement
+            0.9 Average locations per line
+            6.3 Average locations per statement
 
-RAM used:   41/2048 (2%) at main() level
-            63/2048 (3%) worst case
+RAM used:   54/2048 (3%) at main() level
+            77/2048 (4%) worst case
 
-Stack used: 9 worst case (3 in main + 6 for interrupts)
+Stack used: 12 worst case (6 in main + 6 for interrupts)
 Stack size: 31
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-   55    18  18  main.c
+   85    39  15  main.c
   779     0   0  18f2550.h
-  456    84  82  lcd.c
+  435   129  51  string.h
+   32     0   0  stddef.h
+   28     0   0  ctype.h
+  456    84  33  lcd.c
 ----- -----
- 1290   102 Total
+ 1815   252 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
-0     40   2    1             @delay_ms1
-0     60   3    3    596  5.9  lcd_read_byte
-0     12   1    0     59  4.2  lcd_read_nibble
+0    116   4    5    243  7.0  strcmp
+0     40   1    1             @delay_ms1
+0     60   2    3    596  5.9  lcd_read_byte
+0     12   0    0     59  4.2  lcd_read_nibble
 0     24   1    1    179  3.3  lcd_send_nibble
-0     58   3    3    460  4.7  lcd_send_byte
-0    188   9    6    814  7.2  lcd_init
-0     34   2    4    208  6.3  lcd_gotoxy
-0     80   4    1    354  4.7  lcd_putc
-0     10   0    0             @PUTCHARI_BIU_1
-0     44   2    0     70  1.5  tratamiento
-0     38   2    2             @PSTRINGR_640
-0    202  10    2    323  2.3  MAIN
-0     12   1    0             @const668
-0     34   2    2             @PSTRINGC_9600_31766_31767
-0     12   1    0             @const670
-0     26   1    0             @const671
-0      8   0    0             @const672
+0     58   2    3    460  4.7  lcd_send_byte
+0    188   6    6    814  7.2  lcd_init
+0     34   1    4    208  6.3  lcd_gotoxy
+0     80   3    1    354  4.7  lcd_putc
+0      8   0    0             @PUTCHARI_BIU_1
+0     48   2    0     80  1.5  tratamiento
+0     38   1    2             @PSTRINGR_735
+0    154   5    1    315  3.2  initSim800
+0      4   0    0             @const762
+0     34   1    2             @PSTRINGC_9600_31766_31767
+0     10   0    0             @const764
+0     44   1    2             @PSTRINGC_735
+0    346  11    2    705  2.8  MAIN
+0     10   0    0             @const770
+0     12   0    0             @const771
+0     10   0    0             @const772
+0     12   0    0             @const773
+0     24   1    0             @const774
+0     26   1    0             @const775
+0      8   0    0             @const776
+0      8   0    0             @const777
  Inline         0             @cinit1
 
 Program metrics:
-    Functions               9
-    Statements              102
-    Comments                262
-    Volume (V)              4742
-    Difficulty (D)          37.7
-    Effort to implement (E) 178993
-    Time to implement (T)   2 hours, 46 minutes
-    Est Delivered Bugs (B)  1
-    Cyclomatic Complexity   8
-    Maintainability (MI)    143
+    Functions               11
+    Statements              252
+    Comments                408
+    Volume (V)              6422
+    Difficulty (D)          47.4
+    Effort to implement (E) 304143
+    Time to implement (T)   4 hours, 42 minutes
+    Est Delivered Bugs (B)  2
+    Cyclomatic Complexity   10
+    Maintainability (MI)    86
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00002     4  0  
 00004-00006     0  4  
 00008-000AC   166  0  
-000AE-07FFE   882  31712  
+000AE-07FFE  1408  31186  
 
 
 
