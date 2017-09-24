@@ -35,11 +35,23 @@ void initSim800(){
 	comp = strcmp(ok, dato);
 	while(strcmp(ok, dato) != 0){
 		printf("AT\r");
-		gets(dato); //Lee hasta <CR>
+		gets(dato); //Lee el dato recibido hasta el enter<CR> (13)
 		comp = strcmp(ok, dato);
 	}
 	printf("AT+IPR\r");
 	delay_ms(1000);
+}
+
+void init2Sim800(){
+	printf("AT\r");
+	gets(dato);
+	printf(lcd_putc, "%s", dato);
+	comp = strcmp(ok, dato);
+	
+}
+
+void init3Sim800(){
+	printf(lcd_putc, "\r");
 }
 
 void main(){
@@ -47,31 +59,52 @@ void main(){
 	set_tris_c(0b10111111);	//RC7/Rx entrada, RC6/Tx salida	
 	//setup_uart(uart_autodetect);	//Activa ciclo de auto detección de baudios
 	lcd_init();
-	initSim800();
-	enable_interrupts(INT_RDA);		//Activa interrupción en la recepción
-	enable_interrupts(global);		//Habilita interrupciones
+	//init3Sim800();
+	//enable_interrupts(INT_RDA);		//Activa interrupción en la recepción
+	//enable_interrupts(global);		//Habilita interrupciones
 	
 	//lcd_gotoxy(1,1);
 	//printf(lcd_putc, "AT+CMGS=?");
 	//printf("AT+CMGS=?\r"); //Tiene que responder OK
-	//delay_ms(1000);
+	//gets(dato);	//Lee el dato recibido hasta el enter<CR> (13)
+	//lcd_gotoxy(1,2);
+	//printf(lcd_putc, "%s", dato);
+	//delay_ms(5000);
 
 	lcd_gotoxy(1,1);
 	printf(lcd_putc, "AT+CMGF=1");
 	printf("AT+CMGF=1\r"); //Modo texto
-	delay_ms(1000);
+	gets(dato);	//Lee el dato recibido hasta el enter<CR> (13)
+	lcd_gotoxy(1,2);
+	printf(lcd_putc, "%s", dato);
+	gets(dato);	//Lee el dato recibido hasta el enter<CR> (13)
+	lcd_gotoxy(1,2);
+	printf(lcd_putc, "%s", dato);
+	delay_ms(5000);
 
 	lcd_gotoxy(1,1);
 	printf(lcd_putc, "AT+CMGS=\"+593959984110\"");
 	printf("AT+CMGS=\"+593959984110\"\r"); //Numero de telefono
-	delay_ms(1000);
+	gets(dato);	//Lee el dato recibido hasta el enter<CR> (13)
+	lcd_gotoxy(1,2);
+	printf(lcd_putc, "%s", dato);
+	gets(dato);	//Lee el dato recibido hasta el enter<CR> (13)
+	lcd_gotoxy(1,2);
+	printf(lcd_putc, "%s", dato);
+	delay_ms(5000);
 
 	lcd_gotoxy(1,1);
 	printf(lcd_putc, "Prueba");
-	printf("Prueba"); //Mensaje
+	printf("Prueba\r"); //Mensaje
 	putc(26); // CTRL+Z
-	putc('\r');
-	delay_ms(1000);
+	//putc('\r');
+	gets(dato);	//Lee el dato recibido hasta el enter<CR> (13)
+	lcd_gotoxy(1,2);
+	printf(lcd_putc, "%s", dato);
+	gets(dato);	//Lee el dato recibido hasta el enter<CR> (13)
+	lcd_gotoxy(1,2);
+	printf(lcd_putc, "%s", dato);
+	delay_ms(5000);
 
 	while(1)
 	{	
