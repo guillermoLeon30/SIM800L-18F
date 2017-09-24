@@ -1,5 +1,4 @@
 #include <18f2550.h>	//Tipo de procesador
-#include <string.h>
 
 #use delay(clock=4000000)			//Frecuencia de trabajo
 
@@ -17,18 +16,17 @@
 
 #use fast_io (C)
 
-short visualizar=0;
-char c;
 char dato[10];		//Variable para almacena el dato recibido
-char cadena[10];
+char c;
+
 #int_rda			//Vector de interrupción al recibir por el UART
 tratamiento()
 {	
-	gets(dato);	//Lee el dato recibido hasta el enter (10)
+	gets(dato);	//Lee el dato recibido hasta el enter<CR> (13)
+	//c = getc();
+	lcd_putc('\f');
 	printf(lcd_putc, "%s", dato);
-	visualizar = 1;
-	//enable_interrupts(INT_RDA);		//Activa interrupción en la recepción
-	//enable_interrupts(global);		//Habilita interrupciones
+	//printf(lcd_putc, "%d", c);
 }	
 
 void main(){
@@ -38,14 +36,19 @@ void main(){
 	lcd_init();
 	enable_interrupts(INT_RDA);		//Activa interrupción en la recepción
 	enable_interrupts(global);		//Habilita interrupciones
+	
+	printf("AT+CMGS=?\r\n"); //Tiene que responder OK
+	delay_ms(1000);
+	printf("AT+CMGF=1\r\n"); //Modo texto
+	delay_ms(1000);
+	printf("AT+CMGS=\"+593959984110\"\r\n"); //Numero de telefono
+	delay_ms(1000);
+	printf("Prueba"); //Mensaje
+	putc(26); // CTRL+Z
+	delay_ms(1000);
+
 	while(1)
 	{	
-		//if(visualizar == 1){
-		//	lcd_gotoxy(1,1);
-		//	sprintf(dato, "%c", c);	//combierte caracter a string
-		//	strcat(cadena, dato); //ambos string deben ser del mismo tamaño
-		//	printf(lcd_putc, "%s", cadena);
-		//	visualizar = 0;
-		//}
+		
 	}
 }
