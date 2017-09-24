@@ -1,8 +1,11 @@
->>> Warning 208 "main.c" Line 20(1,12): Function not void and does not return a value  tratamiento
->>> Warning 203 "main.c" Line 35(1,1): Condition always TRUE
->>> Warning 216 "main.c" Line 42(1,2): Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
->>> Warning 216 "main.c" Line 42(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_send_nibble)
->>> Warning 216 "main.c" Line 42(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_send_byte)
-      Memory usage:   ROM=3%      RAM=1% - 2%
-      0 Errors,  5 Warnings.
+>>> Warning 208 "main.c" Line 25(1,12): Function not void and does not return a value  tratamiento
+>>> Warning 203 "main.c" Line 41(1,1): Condition always TRUE
+>>> Warning 216 "main.c" Line 51(1,2): Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
+>>> Warning 216 "main.c" Line 51(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_send_nibble)
+>>> Warning 216 "main.c" Line 51(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_send_byte)
+>>> Warning 202 "main.c" Line 21(6,7): Variable never used:   c
+>>> Warning 202 "main.c" Line 23(6,12): Variable never used:   cadena
+>>> Warning 202 "main.c" Line 35(5,9): Variable never used:   cont
+      Memory usage:   ROM=2%      RAM=3% - 4%
+      0 Errors,  8 Warnings.
 Build Successful.

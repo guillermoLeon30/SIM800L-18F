@@ -1,4 +1,6 @@
 #include <18f2550.h>	//Tipo de procesador
+#include <string.h>
+
 #use delay(clock=4000000)			//Frecuencia de trabajo
 
 #fuses 	EC_IO			//Oscilador externo, RA6=E/S,PLL OFF (CONFIG1H)	
@@ -15,14 +17,18 @@
 
 #use fast_io (C)
 
-char dato;		//Variable para almacena el dato recibido
+short visualizar=0;
+char c;
+char dato[10];		//Variable para almacena el dato recibido
+char cadena[10];
 #int_rda			//Vector de interrupción al recibir por el UART
 tratamiento()
 {	
-	
-	dato=getc();	//Lee el dato recibido
-	lcd_putc('\f');
-	printf(lcd_putc, "%c", dato);
+	gets(dato);	//Lee el dato recibido hasta el enter (10)
+	printf(lcd_putc, "%s", dato);
+	visualizar = 1;
+	//enable_interrupts(INT_RDA);		//Activa interrupción en la recepción
+	//enable_interrupts(global);		//Habilita interrupciones
 }	
 
 void main(){
@@ -34,9 +40,12 @@ void main(){
 	enable_interrupts(global);		//Habilita interrupciones
 	while(1)
 	{	
-		cont++;
-		printf("%d", cont);
-		//putc('A');		//Transmite el caracter
-		delay_ms(1000);	//Temporiza 1 segundo
+		//if(visualizar == 1){
+		//	lcd_gotoxy(1,1);
+		//	sprintf(dato, "%c", c);	//combierte caracter a string
+		//	strcat(cadena, dato); //ambos string deben ser del mismo tamaño
+		//	printf(lcd_putc, "%s", cadena);
+		//	visualizar = 0;
+		//}
 	}
 }
