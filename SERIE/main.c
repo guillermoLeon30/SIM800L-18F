@@ -1,4 +1,5 @@
 #include <18f2550.h>	//Tipo de procesador
+#include <string.h>
 
 #use delay(clock=4000000)			//Frecuencia de trabajo
 
@@ -17,17 +18,34 @@
 #use fast_io (C)
 
 char dato[10];		//Variable para almacena el dato recibido
+char ok[10]="OK\r";
 char c;
+int comp;
 
 #int_rda			//Vector de interrupción al recibir por el UART
-tratamiento()
-{	
-	//gets(dato);	//Lee el dato recibido hasta el enter<CR> (13)
-	c = getc();
+tratamiento(){	
+	gets(dato);	//Lee el dato recibido hasta el enter<CR> (13)
+	//c = getc();
 	lcd_gotoxy(1,2);
-	//printf(lcd_putc, "%s", dato);
-	printf(lcd_putc, "%d", c);
+	printf(lcd_putc, "%s", dato);
+	//printf(lcd_putc, "%d", c);
 }	
+
+void initSim800(){
+	disable_interrupts(global); // RS232 OFF
+	comp = strcmp(ok, dato);
+	while(strcmp(ok, dato) != 0){
+		printf("AT\r");
+		delay_ms(100);
+		gets(dato);
+		comp = strcmp(ok, dato);
+	}
+	enable_interrupts(global);		//Activa interrupción en la recepción
+	lcd_gotoxy(1,1);
+	printf(lcd_putc, "TODO BIEN");
+
+	
+}
 
 void main(){
 	int cont=0;
@@ -36,6 +54,8 @@ void main(){
 	lcd_init();
 	enable_interrupts(INT_RDA);		//Activa interrupción en la recepción
 	enable_interrupts(global);		//Habilita interrupciones
+	
+	initSim800();
 	
 	lcd_gotoxy(1,1);
 	printf(lcd_putc, "AT+CMGS=?");
