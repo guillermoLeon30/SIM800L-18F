@@ -1,0 +1,58 @@
+
+ROM used:   816/32768 (2%)
+            816/32768 (2%) including unused fragments
+
+            0.6 Average locations per line
+            8.7 Average locations per statement
+
+RAM used:   29/2048 (1%) at main() level
+            50/2048 (2%) worst case
+
+Stack used: 9 worst case (4 in main + 5 for interrupts)
+Stack size: 31
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   50    10  11  main.c
+  779     0   0  18f2550.h
+  456    84  89  lcd.c
+----- -----
+ 1285    94 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     40   2    1             @delay_ms1
+0     60   4    3    596  5.9  lcd_read_byte
+0     12   1    0     59  4.2  lcd_read_nibble
+0     24   1    1    179  3.3  lcd_send_nibble
+0     58   4    3    460  4.7  lcd_send_byte
+0    188  12    6    814  7.2  lcd_init
+0     34   2    4    208  6.3  lcd_gotoxy
+0     82   5    1    354  4.7  lcd_putc
+0     20   1    0     56  1.9  tratamiento
+0     82   5    0    136  2.0  MAIN
+0     10   1    0             @const662
+0     36   2    2             @PSTRINGC_9600_31766_31767
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               9
+    Statements              94
+    Comments                264
+    Volume (V)              4402
+    Difficulty (D)          39.3
+    Effort to implement (E) 173096
+    Time to implement (T)   2 hours, 40 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   8
+    Maintainability (MI)    144
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-00006     0  4  
+00008-000AC   166  0  
+000AE-07FFE   646  31948  
+
+
+
