@@ -13,6 +13,16 @@
    ³  ³     ³  ÀÄlcd_read_nibble  0/12  Ram=0
    ³  ³     ÃÄlcd_send_nibble  0/24  Ram=1
    ³  ³     ÀÄlcd_send_nibble  0/24  Ram=1
+<<<<<<< HEAD
+=======
+   ³  ÃÄinitSim800  0/122  Ram=1
+   ³  ³  ÃÄstrcmp  0/116  Ram=5
+   ³  ³  ÃÄstrcmp  0/116  Ram=5
+   ³  ³  ÃÄ@PSTRINGC_9600_31766_31767  0/34  Ram=2
+   ³  ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ³  ÃÄstrcmp  0/116  Ram=5
+   ³  ³  ÀÄ@PSTRINGC_9600_31766_31767  0/34  Ram=2
+>>>>>>> 7963a1185f8a5bede6fc63296692cdd1858e9afc
    ³  ÃÄlcd_gotoxy  0/34  Ram=4
    ³  ³  ÀÄlcd_send_byte  0/58  Ram=3
    ³  ³     ÀÄ*

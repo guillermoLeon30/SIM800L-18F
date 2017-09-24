@@ -35,11 +35,16 @@ void initSim800(){
 	comp = strcmp(ok, dato);
 	while(strcmp(ok, dato) != 0){
 		printf("AT\r");
+<<<<<<< HEAD
 		gets(dato); //Lee el dato recibido hasta el enter<CR> (13)
+=======
+		gets(dato); //Lee hasta <CR>
+>>>>>>> 7963a1185f8a5bede6fc63296692cdd1858e9afc
 		comp = strcmp(ok, dato);
 	}
 	printf("AT+IPR\r");
 	delay_ms(1000);
+<<<<<<< HEAD
 }
 
 void init2Sim800(){
@@ -48,6 +53,8 @@ void init2Sim800(){
 	printf(lcd_putc, "%s", dato);
 	comp = strcmp(ok, dato);
 	
+=======
+>>>>>>> 7963a1185f8a5bede6fc63296692cdd1858e9afc
 }
 
 void init3Sim800(){
@@ -59,17 +66,27 @@ void main(){
 	set_tris_c(0b10111111);	//RC7/Rx entrada, RC6/Tx salida	
 	//setup_uart(uart_autodetect);	//Activa ciclo de auto detección de baudios
 	lcd_init();
+<<<<<<< HEAD
 	//init3Sim800();
 	//enable_interrupts(INT_RDA);		//Activa interrupción en la recepción
 	//enable_interrupts(global);		//Habilita interrupciones
+=======
+	initSim800();
+	enable_interrupts(INT_RDA);		//Activa interrupción en la recepción
+	enable_interrupts(global);		//Habilita interrupciones
+>>>>>>> 7963a1185f8a5bede6fc63296692cdd1858e9afc
 	
 	//lcd_gotoxy(1,1);
 	//printf(lcd_putc, "AT+CMGS=?");
 	//printf("AT+CMGS=?\r"); //Tiene que responder OK
+<<<<<<< HEAD
 	//gets(dato);	//Lee el dato recibido hasta el enter<CR> (13)
 	//lcd_gotoxy(1,2);
 	//printf(lcd_putc, "%s", dato);
 	//delay_ms(5000);
+=======
+	//delay_ms(1000);
+>>>>>>> 7963a1185f8a5bede6fc63296692cdd1858e9afc
 
 	lcd_gotoxy(1,1);
 	printf(lcd_putc, "AT+CMGF=1");

@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 CCS PCH C Compiler, Version 5.070, 56587               24-sep-17 17:54
+=======
+CCS PCH C Compiler, Version 5.070, 56587               24-sep-17 16:15
+>>>>>>> 7963a1185f8a5bede6fc63296692cdd1858e9afc
 
-               Filename:   C:\Users\Jaime\Documents\GitHub\SIM800L-18F\SERIE\main.lst
+               Filename:   D:\PIC\SIM800L-18F\SERIE\main.lst
 
+<<<<<<< HEAD
                ROM used:   1606 bytes (5%)
                            Largest free fragment is 31158
                RAM used:   54 (3%) at main() level
@@ -11,6 +16,17 @@ CCS PCH C Compiler, Version 5.070, 56587               24-sep-17 17:54
 
 *
 0000:  GOTO   03B2
+=======
+               ROM used:   1544 bytes (5%)
+                           Largest free fragment is 31220
+               RAM used:   54 (3%) at main() level
+                           77 (4%) worst case
+               Stack used: 10 locations (4 in main + 6 for interrupts)
+               Stack size: 31
+
+*
+0000:  GOTO   04B2
+>>>>>>> 7963a1185f8a5bede6fc63296692cdd1858e9afc
 *
 0008:  MOVWF  04
 000A:  MOVFF  FD8,05
@@ -84,6 +100,7 @@ CCS PCH C Compiler, Version 5.070, 56587               24-sep-17 17:54
 0202:  BRA    01E2
 0204:  RETURN 0
 *
+<<<<<<< HEAD
 0236:  DATA 41,54
 0238:  DATA 0D,00
 023A:  DATA 41,54
@@ -167,6 +184,101 @@ CCS PCH C Compiler, Version 5.070, 56587               24-sep-17 17:54
 03A0:  MOVFF  36,FF7
 03A4:  BRA    0386
 03A6:  RETURN 0
+=======
+0238:  DATA 41,54
+023A:  DATA 0D,00
+023C:  DATA 41,54
+023E:  DATA 2B,49
+0240:  DATA 50,52
+0242:  DATA 0D,00
+0244:  DATA 41,54
+0246:  DATA 2B,43
+0248:  DATA 4D,47
+024A:  DATA 53,3D
+024C:  DATA 3F,00
+024E:  DATA 41,54
+0250:  DATA 2B,43
+0252:  DATA 4D,47
+0254:  DATA 53,3D
+0256:  DATA 3F,0D
+0258:  DATA 00,00
+025A:  DATA 41,54
+025C:  DATA 2B,43
+025E:  DATA 4D,47
+0260:  DATA 46,3D
+0262:  DATA 31,00
+0264:  DATA 41,54
+0266:  DATA 2B,43
+0268:  DATA 4D,47
+026A:  DATA 46,3D
+026C:  DATA 31,0D
+026E:  DATA 00,00
+0270:  DATA 41,54
+0272:  DATA 2B,43
+0274:  DATA 4D,47
+0276:  DATA 53,3D
+0278:  DATA 22,2B
+027A:  DATA 35,39
+027C:  DATA 33,39
+027E:  DATA 35,39
+0280:  DATA 39,38
+0282:  DATA 34,31
+0284:  DATA 31,30
+0286:  DATA 22,00
+0288:  DATA 41,54
+028A:  DATA 2B,43
+028C:  DATA 4D,47
+028E:  DATA 53,3D
+0290:  DATA 22,2B
+0292:  DATA 35,39
+0294:  DATA 33,39
+0296:  DATA 35,39
+0298:  DATA 39,38
+029A:  DATA 34,31
+029C:  DATA 31,30
+029E:  DATA 22,0D
+02A0:  DATA 00,00
+02A2:  DATA 50,72
+02A4:  DATA 75,65
+02A6:  DATA 62,61
+02A8:  DATA 00,00
+02AA:  DATA 50,72
+02AC:  DATA 75,65
+02AE:  DATA 62,61
+02B0:  DATA 00,00
+*
+03E2:  TBLRD*+
+03E4:  MOVF   FF5,F
+03E6:  BZ    0402
+03E8:  MOVFF  FF6,35
+03EC:  MOVFF  FF7,36
+03F0:  MOVF   FF5,W
+03F2:  BTFSS  F9E.4
+03F4:  BRA    03F2
+03F6:  MOVWF  FAD
+03F8:  MOVFF  35,FF6
+03FC:  MOVFF  36,FF7
+0400:  BRA    03E2
+0402:  RETURN 0
+*
+047E:  TBLRD*+
+0480:  MOVF   FF5,F
+0482:  BZ    04A8
+0484:  MOVFF  FF6,35
+0488:  MOVFF  FF7,36
+048C:  CLRF   19
+048E:  BTFSC  FF2.7
+0490:  BSF    19.7
+0492:  BCF    FF2.7
+0494:  MOVFF  FF5,43
+0498:  RCALL  0192
+049A:  BTFSC  19.7
+049C:  BSF    FF2.7
+049E:  MOVFF  35,FF6
+04A2:  MOVFF  36,FF7
+04A6:  BRA    047E
+04A8:  RETURN 0
+>>>>>>> 7963a1185f8a5bede6fc63296692cdd1858e9afc
 ....................  
 .................... #list 
 ....................  
@@ -367,9 +479,57 @@ CCS PCH C Compiler, Version 5.070, 56587               24-sep-17 17:54
 .................... signed int8 strcmp(unsigned char *s1, unsigned char *s2) 
 .................... { 
 ....................    for (; *s1 == *s2; s1++, s2++) 
+<<<<<<< HEAD
 ....................       if (*s1 == '\0') 
 ....................          return(0); 
 ....................    return((*s1 < *s2) ? -1: 1); 
+=======
+*
+036E:  MOVFF  35,FE9
+0372:  MOVFF  36,FEA
+0376:  MOVFF  FEF,39
+037A:  MOVFF  38,03
+037E:  MOVFF  37,FE9
+0382:  MOVFF  38,FEA
+0386:  MOVF   FEF,W
+0388:  SUBWF  39,W
+038A:  BNZ   03B6
+....................       if (*s1 == '\0') 
+038C:  MOVFF  36,03
+0390:  MOVFF  35,FE9
+0394:  MOVFF  03,FEA
+0398:  MOVF   FEF,F
+039A:  BNZ   03A2
+....................          return(0); 
+039C:  MOVLW  00
+039E:  MOVWF  01
+03A0:  BRA    03E0
+03A2:  MOVFF  36,03
+03A6:  MOVF   35,W
+03A8:  INCF   35,F
+03AA:  BTFSC  FD8.2
+03AC:  INCF   36,F
+03AE:  INCF   37,F
+03B0:  BTFSC  FD8.2
+03B2:  INCF   38,F
+03B4:  BRA    036E
+....................    return((*s1 < *s2) ? -1: 1); 
+03B6:  MOVFF  36,03
+03BA:  MOVFF  35,FE9
+03BE:  MOVFF  36,FEA
+03C2:  MOVFF  FEF,39
+03C6:  MOVFF  38,03
+03CA:  MOVFF  37,FE9
+03CE:  MOVFF  38,FEA
+03D2:  MOVF   FEF,W
+03D4:  SUBWF  39,W
+03D6:  BC    03DC
+03D8:  MOVLW  FF
+03DA:  BRA    03DE
+03DC:  MOVLW  01
+03DE:  MOVWF  01
+03E0:  RETURN 0
+>>>>>>> 7963a1185f8a5bede6fc63296692cdd1858e9afc
 .................... } 
 .................... /* standard template: int strcoll(const char *s1, const char *s2). 
 ....................    Compares s1 & s2; returns -1 if s1<s2, 0 if s1=s2, 1 if s1>s2 */ 
@@ -1077,6 +1237,7 @@ CCS PCH C Compiler, Version 5.070, 56587               24-sep-17 17:54
 ....................    unsigned int8 i; 
 ....................    unsigned int8 LCD_INIT_STRING[4] = {0x20 | (LCD_TYPE << 2), 0xc, 1, 6}; 
 *
+<<<<<<< HEAD
 029E:  MOVLW  28
 02A0:  MOVWF  36
 02A2:  MOVLW  0C
@@ -1085,16 +1246,34 @@ CCS PCH C Compiler, Version 5.070, 56587               24-sep-17 17:54
 02A8:  MOVWF  38
 02AA:  MOVLW  06
 02AC:  MOVWF  39
+=======
+02B2:  MOVLW  28
+02B4:  MOVWF  36
+02B6:  MOVLW  0C
+02B8:  MOVWF  37
+02BA:  MOVLW  01
+02BC:  MOVWF  38
+02BE:  MOVLW  06
+02C0:  MOVWF  39
+>>>>>>> 7963a1185f8a5bede6fc63296692cdd1858e9afc
 ....................                              // These bytes need to be sent to the LCD 
 ....................                              // to start it up. 
 ....................     
 ....................  
 ....................    lcd_output_enable(0); 
+<<<<<<< HEAD
 02AE:  BCF    F8A.0
 ....................    lcd_output_rs(0); 
 02B0:  BCF    F8A.1
 ....................    lcd_output_rw(0); 
 02B2:  BCF    F8A.2
+=======
+02C2:  BCF    F8A.0
+....................    lcd_output_rs(0); 
+02C4:  BCF    F8A.1
+....................    lcd_output_rw(0); 
+02C6:  BCF    F8A.2
+>>>>>>> 7963a1185f8a5bede6fc63296692cdd1858e9afc
 ....................  
 ....................  #if defined(__PCB__) 
 ....................    set_tris_lcd(LCD_OUTPUT_MAP); 
@@ -1106,6 +1285,7 @@ CCS PCH C Compiler, Version 5.070, 56587               24-sep-17 17:54
 ....................    output_drive(LCD_DATA7); 
 ....................   #else 
 ....................    lcdtris.data = 0x0; 
+<<<<<<< HEAD
 02B4:  MOVLW  0F
 02B6:  ANDWF  F93,W
 02B8:  MOVWF  F93
@@ -1206,6 +1386,108 @@ CCS PCH C Compiler, Version 5.070, 56587               24-sep-17 17:54
 0352:  INCF   35,F
 0354:  BRA    032A
 0356:  GOTO   03F0 (RETURN)
+=======
+02C8:  MOVLW  0F
+02CA:  ANDWF  F93,W
+02CC:  MOVWF  F93
+....................   #endif 
+....................    lcd_enable_tris(); 
+02CE:  BCF    F93.0
+....................    lcd_rs_tris(); 
+02D0:  BCF    F93.1
+....................    lcd_rw_tris(); 
+02D2:  BCF    F93.2
+02D4:  CLRF   19
+02D6:  BTFSC  FF2.7
+02D8:  BSF    19.7
+02DA:  BCF    FF2.7
+....................  #endif 
+....................      
+....................    delay_ms(15); 
+02DC:  MOVLW  0F
+02DE:  MOVWF  44
+02E0:  RCALL  016A
+02E2:  BTFSC  19.7
+02E4:  BSF    FF2.7
+....................    for(i=1;i<=3;++i) 
+02E6:  MOVLW  01
+02E8:  MOVWF  35
+02EA:  MOVF   35,W
+02EC:  SUBLW  03
+02EE:  BNC   0318
+02F0:  CLRF   19
+02F2:  BTFSC  FF2.7
+02F4:  BSF    19.7
+02F6:  BCF    FF2.7
+....................    { 
+....................        lcd_send_nibble(3); 
+02F8:  MOVLW  03
+02FA:  MOVWF  4B
+02FC:  RCALL  00F6
+02FE:  BTFSC  19.7
+0300:  BSF    FF2.7
+0302:  CLRF   19
+0304:  BTFSC  FF2.7
+0306:  BSF    19.7
+0308:  BCF    FF2.7
+....................        delay_ms(5); 
+030A:  MOVLW  05
+030C:  MOVWF  44
+030E:  RCALL  016A
+0310:  BTFSC  19.7
+0312:  BSF    FF2.7
+0314:  INCF   35,F
+0316:  BRA    02EA
+0318:  CLRF   19
+031A:  BTFSC  FF2.7
+031C:  BSF    19.7
+031E:  BCF    FF2.7
+....................    } 
+....................     
+....................    lcd_send_nibble(2); 
+0320:  MOVLW  02
+0322:  MOVWF  4B
+0324:  RCALL  00F6
+0326:  BTFSC  19.7
+0328:  BSF    FF2.7
+032A:  CLRF   19
+032C:  BTFSC  FF2.7
+032E:  BSF    19.7
+0330:  BCF    FF2.7
+....................    delay_ms(5); 
+0332:  MOVLW  05
+0334:  MOVWF  44
+0336:  RCALL  016A
+0338:  BTFSC  19.7
+033A:  BSF    FF2.7
+....................    for(i=0;i<=3;++i) 
+033C:  CLRF   35
+033E:  MOVF   35,W
+0340:  SUBLW  03
+0342:  BNC   036A
+....................       lcd_send_byte(0,LCD_INIT_STRING[i]); 
+0344:  CLRF   03
+0346:  MOVF   35,W
+0348:  ADDLW  36
+034A:  MOVWF  FE9
+034C:  MOVLW  00
+034E:  ADDWFC 03,W
+0350:  MOVWF  FEA
+0352:  MOVFF  FEF,49
+0356:  CLRF   19
+0358:  BTFSC  FF2.7
+035A:  BSF    19.7
+035C:  BCF    FF2.7
+035E:  CLRF   48
+0360:  RCALL  010E
+0362:  BTFSC  19.7
+0364:  BSF    FF2.7
+....................  
+....................   #if defined(LCD_EXTENDED_NEWLINE) 
+0366:  INCF   35,F
+0368:  BRA    033E
+036A:  GOTO   04F0 (RETURN)
+>>>>>>> 7963a1185f8a5bede6fc63296692cdd1858e9afc
 ....................    g_LcdX = 0; 
 ....................    g_LcdY = 0; 
 ....................   #endif 
@@ -1385,10 +1667,17 @@ CCS PCH C Compiler, Version 5.070, 56587               24-sep-17 17:54
 .................... //Habilita las funciones RS232, velocidad a 9600 baudios 
 .................... #use rs232(Baud=9600,xmit=PIN_C6, rcv=PIN_C7) 
 *
+<<<<<<< HEAD
 03A8:  BTFSS  F9E.4
 03AA:  BRA    03A8
 03AC:  MOVWF  FAD
 03AE:  GOTO   05A8 (RETURN)
+=======
+04AA:  BTFSS  F9E.4
+04AC:  BRA    04AA
+04AE:  MOVWF  FAD
+04B0:  RETURN 0
+>>>>>>> 7963a1185f8a5bede6fc63296692cdd1858e9afc
 ....................  
 .................... #use fast_io (C) 
 ....................  
@@ -1431,6 +1720,7 @@ CCS PCH C Compiler, Version 5.070, 56587               24-sep-17 17:54
 ....................  
 .................... void initSim800(){ 
 .................... 	comp = strcmp(ok, dato); 
+<<<<<<< HEAD
 .................... 	while(strcmp(ok, dato) != 0){ 
 .................... 		printf("AT\r"); 
 .................... 		gets(dato); //Lee el dato recibido hasta el enter<CR> (13) 
@@ -1450,10 +1740,78 @@ CCS PCH C Compiler, Version 5.070, 56587               24-sep-17 17:54
 ....................  
 .................... void init3Sim800(){ 
 .................... 	printf(lcd_putc, "\r"); 
+=======
+*
+0404:  CLRF   36
+0406:  MOVLW  26
+0408:  MOVWF  35
+040A:  CLRF   38
+040C:  MOVLW  1C
+040E:  MOVWF  37
+0410:  RCALL  036E
+0412:  MOVFF  01,31
+.................... 	while(strcmp(ok, dato) != 0){ 
+0416:  CLRF   36
+0418:  MOVLW  26
+041A:  MOVWF  35
+041C:  CLRF   38
+041E:  MOVLW  1C
+0420:  MOVWF  37
+0422:  RCALL  036E
+0424:  MOVF   01,F
+0426:  BZ    0470
+.................... 		printf("AT\r"); 
+0428:  MOVLW  38
+042A:  MOVWF  FF6
+042C:  MOVLW  02
+042E:  MOVWF  FF7
+0430:  RCALL  03E2
+0432:  CLRF   19
+0434:  BTFSC  FF2.7
+0436:  BSF    19.7
+0438:  BCF    FF2.7
+.................... 		delay_ms(100); 
+043A:  MOVLW  64
+043C:  MOVWF  44
+043E:  RCALL  016A
+0440:  BTFSC  19.7
+0442:  BSF    FF2.7
+.................... 		gets(dato); 
+0444:  CLRF   FEA
+0446:  MOVLW  1C
+0448:  MOVWF  FE9
+044A:  CLRF   FED
+044C:  BTFSS  F9E.5
+044E:  BRA    044C
+0450:  MOVFF  FAE,FEC
+0454:  MOVLW  0D
+0456:  SUBWF  FEF,W
+0458:  BNZ   044C
+045A:  CLRF   FEC
+.................... 		comp = strcmp(ok, dato); 
+045C:  CLRF   36
+045E:  MOVLW  26
+0460:  MOVWF  35
+0462:  CLRF   38
+0464:  MOVLW  1C
+0466:  MOVWF  37
+0468:  RCALL  036E
+046A:  MOVFF  01,31
+046E:  BRA    0416
+.................... 	} 
+.................... 	printf("AT+IPR\r"); 
+0470:  MOVLW  3C
+0472:  MOVWF  FF6
+0474:  MOVLW  02
+0476:  MOVWF  FF7
+0478:  RCALL  03E2
+047A:  GOTO   04F2 (RETURN)
+>>>>>>> 7963a1185f8a5bede6fc63296692cdd1858e9afc
 .................... } 
 ....................  
 .................... void main(){ 
 *
+<<<<<<< HEAD
 03B2:  CLRF   FF8
 03B4:  BCF    FD0.7
 03B6:  BSF    07.7
@@ -1836,6 +2194,216 @@ CCS PCH C Compiler, Version 5.070, 56587               24-sep-17 17:54
 .................... 	} 
 .................... } 
 0648:  SLEEP 
+=======
+04B2:  CLRF   FF8
+04B4:  BCF    FD0.7
+04B6:  BSF    07.7
+04B8:  BCF    FB8.3
+04BA:  MOVLW  19
+04BC:  MOVWF  FAF
+04BE:  MOVLW  A6
+04C0:  MOVWF  FAC
+04C2:  MOVLW  90
+04C4:  MOVWF  FAB
+04C6:  CLRF   33
+04C8:  CLRF   32
+04CA:  MOVF   FC1,W
+04CC:  ANDLW  C0
+04CE:  IORLW  0F
+04D0:  MOVWF  FC1
+04D2:  MOVLW  07
+04D4:  MOVWF  FB4
+04D6:  CLRF   1A
+04D8:  CLRF   1B
+04DA:  MOVLW  4F
+04DC:  MOVWF  26
+04DE:  MOVLW  4B
+04E0:  MOVWF  27
+04E2:  MOVLW  0D
+04E4:  MOVWF  28
+04E6:  CLRF   29
+04E8:  CLRF   34
+.................... 	int cont=0; 
+.................... 	set_tris_c(0b10111111);	//RC7/Rx entrada, RC6/Tx salida	 
+04EA:  MOVLW  BF
+04EC:  MOVWF  F94
+.................... 	//setup_uart(uart_autodetect);	//Activa ciclo de auto detección de baudios 
+.................... 	lcd_init(); 
+04EE:  BRA    02B2
+.................... 	initSim800(); 
+04F0:  BRA    0404
+.................... 	enable_interrupts(INT_RDA);		//Activa interrupción en la recepción 
+04F2:  BSF    F9D.5
+.................... 	enable_interrupts(global);		//Habilita interrupciones 
+04F4:  MOVLW  C0
+04F6:  IORWF  FF2,F
+04F8:  CLRF   19
+04FA:  BTFSC  FF2.7
+04FC:  BSF    19.7
+04FE:  BCF    FF2.7
+.................... 	 
+.................... 	lcd_gotoxy(1,1); 
+0500:  MOVLW  01
+0502:  MOVWF  44
+0504:  MOVWF  45
+0506:  RCALL  0148
+0508:  BTFSC  19.7
+050A:  BSF    FF2.7
+.................... 	printf(lcd_putc, "AT+CMGS=?"); 
+050C:  MOVLW  44
+050E:  MOVWF  FF6
+0510:  MOVLW  02
+0512:  MOVWF  FF7
+0514:  RCALL  047E
+.................... 	printf("AT+CMGS=?\r"); //Tiene que responder OK 
+0516:  MOVLW  4E
+0518:  MOVWF  FF6
+051A:  MOVLW  02
+051C:  MOVWF  FF7
+051E:  RCALL  03E2
+.................... 	delay_ms(1000); 
+0520:  MOVLW  04
+0522:  MOVWF  35
+0524:  CLRF   19
+0526:  BTFSC  FF2.7
+0528:  BSF    19.7
+052A:  BCF    FF2.7
+052C:  MOVLW  FA
+052E:  MOVWF  44
+0530:  RCALL  016A
+0532:  BTFSC  19.7
+0534:  BSF    FF2.7
+0536:  DECFSZ 35,F
+0538:  BRA    0524
+053A:  CLRF   19
+053C:  BTFSC  FF2.7
+053E:  BSF    19.7
+0540:  BCF    FF2.7
+....................  
+.................... 	lcd_gotoxy(1,1); 
+0542:  MOVLW  01
+0544:  MOVWF  44
+0546:  MOVWF  45
+0548:  RCALL  0148
+054A:  BTFSC  19.7
+054C:  BSF    FF2.7
+.................... 	printf(lcd_putc, "AT+CMGF=1"); 
+054E:  MOVLW  5A
+0550:  MOVWF  FF6
+0552:  MOVLW  02
+0554:  MOVWF  FF7
+0556:  RCALL  047E
+.................... 	printf("AT+CMGF=1\r"); //Modo texto 
+0558:  MOVLW  64
+055A:  MOVWF  FF6
+055C:  MOVLW  02
+055E:  MOVWF  FF7
+0560:  RCALL  03E2
+.................... 	delay_ms(1000); 
+0562:  MOVLW  04
+0564:  MOVWF  35
+0566:  CLRF   19
+0568:  BTFSC  FF2.7
+056A:  BSF    19.7
+056C:  BCF    FF2.7
+056E:  MOVLW  FA
+0570:  MOVWF  44
+0572:  RCALL  016A
+0574:  BTFSC  19.7
+0576:  BSF    FF2.7
+0578:  DECFSZ 35,F
+057A:  BRA    0566
+057C:  CLRF   19
+057E:  BTFSC  FF2.7
+0580:  BSF    19.7
+0582:  BCF    FF2.7
+....................  
+.................... 	lcd_gotoxy(1,1); 
+0584:  MOVLW  01
+0586:  MOVWF  44
+0588:  MOVWF  45
+058A:  RCALL  0148
+058C:  BTFSC  19.7
+058E:  BSF    FF2.7
+.................... 	printf(lcd_putc, "AT+CMGS=\"+593959984110\""); 
+0590:  MOVLW  70
+0592:  MOVWF  FF6
+0594:  MOVLW  02
+0596:  MOVWF  FF7
+0598:  RCALL  047E
+.................... 	printf("AT+CMGS=\"+593959984110\"\r"); //Numero de telefono 
+059A:  MOVLW  88
+059C:  MOVWF  FF6
+059E:  MOVLW  02
+05A0:  MOVWF  FF7
+05A2:  RCALL  03E2
+.................... 	delay_ms(1000); 
+05A4:  MOVLW  04
+05A6:  MOVWF  35
+05A8:  CLRF   19
+05AA:  BTFSC  FF2.7
+05AC:  BSF    19.7
+05AE:  BCF    FF2.7
+05B0:  MOVLW  FA
+05B2:  MOVWF  44
+05B4:  RCALL  016A
+05B6:  BTFSC  19.7
+05B8:  BSF    FF2.7
+05BA:  DECFSZ 35,F
+05BC:  BRA    05A8
+05BE:  CLRF   19
+05C0:  BTFSC  FF2.7
+05C2:  BSF    19.7
+05C4:  BCF    FF2.7
+....................  
+.................... 	lcd_gotoxy(1,1); 
+05C6:  MOVLW  01
+05C8:  MOVWF  44
+05CA:  MOVWF  45
+05CC:  RCALL  0148
+05CE:  BTFSC  19.7
+05D0:  BSF    FF2.7
+.................... 	printf(lcd_putc, "Prueba"); 
+05D2:  MOVLW  A2
+05D4:  MOVWF  FF6
+05D6:  MOVLW  02
+05D8:  MOVWF  FF7
+05DA:  RCALL  047E
+.................... 	printf("Prueba"); //Mensaje 
+05DC:  MOVLW  AA
+05DE:  MOVWF  FF6
+05E0:  MOVLW  02
+05E2:  MOVWF  FF7
+05E4:  RCALL  03E2
+.................... 	putc(26); // CTRL+Z 
+05E6:  MOVLW  1A
+05E8:  RCALL  04AA
+.................... 	putc('\r'); 
+05EA:  MOVLW  0D
+05EC:  RCALL  04AA
+.................... 	delay_ms(1000); 
+05EE:  MOVLW  04
+05F0:  MOVWF  35
+05F2:  CLRF   19
+05F4:  BTFSC  FF2.7
+05F6:  BSF    19.7
+05F8:  BCF    FF2.7
+05FA:  MOVLW  FA
+05FC:  MOVWF  44
+05FE:  RCALL  016A
+0600:  BTFSC  19.7
+0602:  BSF    FF2.7
+0604:  DECFSZ 35,F
+0606:  BRA    05F2
+....................  
+.................... 	while(1) 
+.................... 	{	 
+0608:  BRA    0608
+.................... 		 
+.................... 	} 
+.................... } 
+060A:  SLEEP 
+>>>>>>> 7963a1185f8a5bede6fc63296692cdd1858e9afc
 
 Configuration Fuses:
    Word  1: C427   PLL12 CPUDIV1 USBDIV EC_IO FCMEN IESO
