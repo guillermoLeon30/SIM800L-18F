@@ -2,7 +2,11 @@
 MagicCookie={0b13fe8c-dfe0-40eb-8900-6712719559a7}
 Version=1.0
 [File000]
+<<<<<<< HEAD
 Location=D:\PIC\SIM800L-18F\SERIE\main.o
+=======
+Location=C:\Users\Jaime\Documents\GitHub\SIM800L-18F\SERIE\main.o
+>>>>>>> 2fe1c6d7eb9a2af61f6deda983c785a3907fbefe
 Folder=Intermediary
 [File001]
 Location=main.HEX
