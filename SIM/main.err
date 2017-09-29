@@ -1,9 +1,10 @@
->>> Warning 208 "main.c" Line 20(1,12): Function not void and does not return a value  tratamiento
->>> Warning 203 "main.c" Line 45(1,1): Condition always TRUE
->>> Warning 216 "main.c" Line 49(1,2): Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
->>> Warning 216 "main.c" Line 49(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_send_nibble)
->>> Warning 216 "main.c" Line 49(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_send_byte)
->>> Warning 216 "main.c" Line 49(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_gotoxy)
-      Memory usage:   ROM=2%      RAM=1% - 2%
-      0 Errors,  6 Warnings.
+>>> Warning 208 "main.c" Line 26(1,12): Function not void and does not return a value  tratamiento
+>>> Warning 203 "main.c" Line 49(1,1): Condition always TRUE
+>>> Warning 216 "main.c" Line 65(1,2): Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
+>>> Warning 216 "main.c" Line 65(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_send_nibble)
+>>> Warning 216 "main.c" Line 65(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_send_byte)
+>>> Warning 216 "main.c" Line 65(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_gotoxy)
+>>> Warning 202 "main.c" Line 21(6,11): Variable never used:   dato3
+      Memory usage:   ROM=4%      RAM=4% - 5%
+      0 Errors,  7 Warnings.
 Build Successful.

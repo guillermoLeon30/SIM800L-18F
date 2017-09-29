@@ -12,16 +12,28 @@
 
 //Habilita las funciones RS232, velocidad a 9600 baudios
 #use rs232(Baud=9600,xmit=PIN_C6, rcv=PIN_C7)
-
 #use fast_io (C)
 
-char dato;		//Variable para almacena el dato recibido
+void mensajeSim800(unsigned char *numero,unsigned char *mensaje );
+
+char dato1[10];			//Variable para almacena el dato recibido
+char dato2[10];
+char dato3[10];
+char numero[10] = "423245243";
+char mensaje[10] = "Hola";
+
 #int_rda			//Vector de interrupción al recibir por el UART
-tratamiento()
-{	
-	dato = getc();	//Lee el dato recibido
-	
-	printf(lcd_putc, "%c", dato);
+tratamiento(){	
+	disable_interrupts(INT_RDA);
+	//dato = getc();	//Lee el dato recibido
+	gets(dato1);
+	gets(dato2);
+	//printf(lcd_putc, "%c", dato);
+	printf(lcd_putc, "%s\n", dato1 );
+	lcd_gotoxy(1,2);
+	printf(lcd_putc, "%s\n", dato2 );
+	lcd_gotoxy(1,1);
+	enable_interrupts(INT_RDA);		//Activa interrupción en la recepción
 }	
 
 void main(){
@@ -31,19 +43,23 @@ void main(){
 	enable_interrupts(INT_RDA);		//Activa interrupción en la recepción
 	enable_interrupts(global);		//Habilita interrupciones
 	lcd_gotoxy(1,1);
-	//printf(lcd_putc, "AT2");
-	//lcd_gotoxy(1,2);
-	printf("AT+CMGS=?");
 
-	//printf("AT+CMGF=1\r");
-	//delay_ms(100);
-	//printf("AT+CMGS=0959984110\r");
-	//delay_ms(500);
-	//printf("Esto es una prueba");
-	//delay_ms(500);
-	//putchar(0x1a);
+	mensajeSim800(numero, mensaje);
+
 	while(1)
 	{	
-		
+		//printf(lcd_putc, "%s\n", dato );	
 	}
+}
+
+void mensajeSim800(unsigned char *numero, unsigned char *mensaje ){
+	printf("AT+CMGF=1\r");
+	delay_ms(1000);
+	printf("AT+CMGS=\"%s\"", numero);
+	printf("\r\n");
+	delay_ms(1000);
+	printf("%s", mensaje);
+	putc(26);
+	delay_ms(1000);
+	printf("\r\n");
 }
