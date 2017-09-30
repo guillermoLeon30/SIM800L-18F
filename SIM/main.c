@@ -27,12 +27,9 @@ tratamiento(){
 	disable_interrupts(INT_RDA);
 	//dato = getc();	//Lee el dato recibido
 	gets(dato1);
-	gets(dato2);
-	//printf(lcd_putc, "%c", dato);
-	printf(lcd_putc, "%s\n", dato1 );
-	lcd_gotoxy(1,2);
-	printf(lcd_putc, "%s\n", dato2 );
-	lcd_gotoxy(1,1);
+	lcd_putc('\f');
+	printf(lcd_putc, "%s", dato1 );
+	
 	enable_interrupts(INT_RDA);		//Activa interrupción en la recepción
 }	
 
@@ -40,8 +37,9 @@ void main(){
 	set_tris_c(0b10111111);	//RC7/Rx entrada, RC6/Tx salida	
 	//setup_uart(uart_autodetect);	//Activa ciclo de auto detección de baudios
 	lcd_init();
-	enable_interrupts(INT_RDA);		//Activa interrupción en la recepción
-	enable_interrupts(global);		//Habilita interrupciones
+	//enable_interrupts(INT_RDA);		//Activa interrupción en la recepción
+	//enable_interrupts(global);		//Habilita interrupciones
+	
 	lcd_gotoxy(1,1);
 
 	mensajeSim800(numero, mensaje);
@@ -53,6 +51,10 @@ void main(){
 }
 
 void mensajeSim800(unsigned char *numero, unsigned char *mensaje ){
+	printf("AT\r");
+	//gets(dato1);
+	printf(lcd_putc, "%s", dato1);
+	delay_ms(1000);
 	printf("AT+CMGF=1\r");
 	delay_ms(1000);
 	printf("AT+CMGS=\"%s\"", numero);

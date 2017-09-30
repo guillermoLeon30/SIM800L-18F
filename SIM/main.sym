@@ -44,21 +44,21 @@
 053     @PSTRINGCN_9600_31766_31767.@SCRATCH1
 053     @PSTRINGR_9600_31766_31767.@SCRATCH2
 054     @PSTRINGCN_9600_31766_31767.@SCRATCH2
-059     @PSTRINGR_640.@SCRATCH1
-05A     @PSTRINGR_640.@SCRATCH2
-05B     lcd_putc.c
-05C     lcd_gotoxy.x
-05C     @delay_ms1.P1
-05D     lcd_gotoxy.y
-05E     lcd_gotoxy.address
-05F     lcd_gotoxy.@SCRATCH1
-060     lcd_send_byte.address
-061     lcd_send_byte.n
-062     lcd_read_byte.low
-062     lcd_send_byte.@SCRATCH1
-063     lcd_send_nibble.n
-063     lcd_read_byte.high
-064     lcd_read_byte.@SCRATCH1
+05E     @PSTRINGR_640.@SCRATCH1
+05F     @PSTRINGR_640.@SCRATCH2
+060     lcd_putc.c
+061     lcd_gotoxy.x
+061     @delay_ms1.P1
+062     lcd_gotoxy.y
+063     lcd_gotoxy.address
+064     lcd_gotoxy.@SCRATCH1
+065     lcd_send_byte.address
+066     lcd_send_byte.n
+067     lcd_read_byte.low
+067     lcd_send_byte.@SCRATCH1
+068     lcd_read_byte.high
+068     lcd_send_nibble.n
+069     lcd_read_byte.@SCRATCH1
 F81     lcd
 F8A     lcdlat
 F93     lcdtris
@@ -73,8 +73,8 @@ FBF     CCP_1_HIGH
 FE1-FE2 @READ_PACKED_MEMORY.P1
 FE1-FE2 @WRITE_PACKED_MEMORY.P2
 FE9-FEA @WRITE_PACKED_MEMORY.P1
-FE9-FEA @READ_PROGRAM_MEMORY.P2
-FE9-FEA @WRITE_PROGRAM_MEMORY.P3
+FE9-FEA @WRITE_PROGRAM_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P3
 FE9-FEA @READ_PACKED_MEMORY.P4
 FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
 FF6-FF8 @READ_PROGRAM_MEMORY.P2
@@ -89,30 +89,31 @@ ROM Allocation:
 000192  lcd_putc
 0001E2  @PSTRINGR_640
 000206  tratamiento
-00026E  @const674.call
-00027A  @const676.call
-000288  lcd_init
-000344  @PSTRINGC_9600_31766_31767
-000368  @PSTRINGCN_9600_31766_31767
-00038A  @PSTRINGR_9600_31766_31767
-0003B0  @PUTCHARI_BIU_1
-0003BA  mensajeSim800
-000464  MAIN
-000464  @cinit1
-000488  @cinit2
+000236  @const673.call
+00023A  @const676.call
+000246  @const677.call
+000254  lcd_init
+000310  @PSTRINGC_9600_31766_31767
+000332  @PSTRINGCN_9600_31766_31767
+000354  @PSTRINGR_9600_31766_31767
+00037A  @PUTCHARI_BIU_1
+000384  mensajeSim800
+000466  MAIN
+000466  @cinit1
+00048A  @cinit2
 
 Project Directory:
     D:\PIC\SIM800L-18F\SIM\
 
 Project Files:
-    main.c                                                  [28-sep-17 23:25  CRC=DBD25E73]
+    main.c                                                  [30-sep-17 16:15  CRC=908261A8]
     18f2550.h                                               [24-sep-17 14:34  CRC=A8B80131]
     lcd.c                                                   [24-sep-17 14:34  CRC=D1A6378A]
 
-Source signature=27D6CEB8
+Source signature=DC86D1ED
 Program memory checksum=0000
 Program memory CRC=0000
-Hex file CRC=D3F7
+Hex file CRC=E045
 
 Units:
     main (main)
