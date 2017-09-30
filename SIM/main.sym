@@ -25,95 +25,103 @@
 017     @INTERRUPT_AREA
 018     @INTERRUPT_AREA
 019     @INTERRUPT_AREA
-01A-023 dato1
-024-02D dato2
-02E-037 dato3
-038-041 numero
-042-04B mensaje
-04C-04D @sprintf_string
-04E     lcd_init.i
-04E-04F mensajeSim800.numero
-04F-052 lcd_init.LCD_INIT_STRING
-050-051 mensajeSim800.mensaje
-052     @PSTRINGCN_9600_31766_31767.P1
-052     mensajeSim800.@SCRATCH1
-052     @PSTRINGC_9600_31766_31767.@SCRATCH1
-052     @PSTRINGR_9600_31766_31767.@SCRATCH1
-053     lcd_init.@SCRATCH1
-053     @PSTRINGC_9600_31766_31767.@SCRATCH2
-053     @PSTRINGCN_9600_31766_31767.@SCRATCH1
-053     @PSTRINGR_9600_31766_31767.@SCRATCH2
-054     @PSTRINGCN_9600_31766_31767.@SCRATCH2
-05E     @PSTRINGR_640.@SCRATCH1
-05F     @PSTRINGR_640.@SCRATCH2
-060     lcd_putc.c
-061     lcd_gotoxy.x
-061     @delay_ms1.P1
-062     lcd_gotoxy.y
-063     lcd_gotoxy.address
-064     lcd_gotoxy.@SCRATCH1
-065     lcd_send_byte.address
-066     lcd_send_byte.n
-067     lcd_read_byte.low
-067     lcd_send_byte.@SCRATCH1
-068     lcd_read_byte.high
-068     lcd_send_nibble.n
-069     lcd_read_byte.@SCRATCH1
+01A     dato1
+01B-024 dato2
+025-02E dato3
+02F-038 numero
+039-042 mensaje
+043-044 @sprintf_string
+045     MAIN.c
+046     lcd_init.i
+046-047 mensajeSim800.numero
+047-04A lcd_init.LCD_INIT_STRING
+048-049 mensajeSim800.mensaje
+04A     @PSTRINGCN_9600_31766_31767.P1
+04A     mensajeSim800.@SCRATCH1
+04A     @PSTRINGC_9600_31766_31767.@SCRATCH1
+04A     @PSTRINGR_9600_31766_31767.@SCRATCH1
+04B     lcd_init.@SCRATCH1
+04B     @PSTRINGC_9600_31766_31767.@SCRATCH2
+04B     @PSTRINGCN_9600_31766_31767.@SCRATCH1
+04B     @PSTRINGR_9600_31766_31767.@SCRATCH2
+04C     @PSTRINGCN_9600_31766_31767.@SCRATCH2
+056-057 palabra.p
+056     @PSTRINGR_640.@SCRATCH1
+057     @PSTRINGR_640.@SCRATCH2
+058     lcd_putc.c
+058     palabra.c
+059     @delay_ms1.P1
+059     lcd_gotoxy.x
+059     palabra.dato
+05A     lcd_gotoxy.y
+05A     palabra.i
+05B     lcd_gotoxy.address
+05B     palabra.@SCRATCH1
+05C     lcd_gotoxy.@SCRATCH1
+05C     palabra.@SCRATCH2
+05D     lcd_send_byte.address
+05E     lcd_send_byte.n
+05F     lcd_read_byte.low
+05F     lcd_send_byte.@SCRATCH1
+060     lcd_read_byte.high
+060     lcd_send_nibble.n
+061     lcd_read_byte.@SCRATCH1
 F81     lcd
 F8A     lcdlat
 F93     lcdtris
 FB4.6   C1OUT
 FB4.7   C2OUT
-FBB     CCP_2_LOW
 FBB     CCP_2
+FBB     CCP_2_LOW
 FBC     CCP_2_HIGH
 FBE     CCP_1
 FBE     CCP_1_LOW
 FBF     CCP_1_HIGH
 FE1-FE2 @READ_PACKED_MEMORY.P1
 FE1-FE2 @WRITE_PACKED_MEMORY.P2
-FE9-FEA @WRITE_PACKED_MEMORY.P1
-FE9-FEA @WRITE_PROGRAM_MEMORY.P2
-FE9-FEA @READ_PROGRAM_MEMORY.P3
-FE9-FEA @READ_PACKED_MEMORY.P4
+FE9-FEA @READ_PACKED_MEMORY.P1
+FE9-FEA @READ_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P3
+FE9-FEA @WRITE_PACKED_MEMORY.P4
 FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
 FF6-FF8 @READ_PROGRAM_MEMORY.P2
 
 ROM Allocation:
-0000AE  lcd_read_nibble
-0000BA  lcd_read_byte
-0000F6  lcd_send_nibble
-00010E  lcd_send_byte
-000148  lcd_gotoxy
-00016A  @delay_ms1
-000192  lcd_putc
-0001E2  @PSTRINGR_640
-000206  tratamiento
-000236  @const673.call
-00023A  @const676.call
-000246  @const677.call
-000254  lcd_init
-000310  @PSTRINGC_9600_31766_31767
-000332  @PSTRINGCN_9600_31766_31767
-000354  @PSTRINGR_9600_31766_31767
-00037A  @PUTCHARI_BIU_1
-000384  mensajeSim800
-000466  MAIN
-000466  @cinit1
-00048A  @cinit2
+0000AE  palabra
+0000DC  lcd_read_nibble
+0000E8  lcd_read_byte
+000124  lcd_send_nibble
+00013C  lcd_send_byte
+000176  lcd_gotoxy
+000198  @delay_ms1
+0001C0  lcd_putc
+000210  @PSTRINGR_640
+000234  tratamiento
+000254  @const678.call
+000258  @const681.call
+000264  @const682.call
+000272  lcd_init
+00032E  @PSTRINGC_9600_31766_31767
+000350  @PSTRINGCN_9600_31766_31767
+000372  @PSTRINGR_9600_31766_31767
+000398  @PUTCHARI_BIU_1
+0003A2  mensajeSim800
+00049C  MAIN
+00049C  @cinit1
+0004C0  @cinit2
 
 Project Directory:
     D:\PIC\SIM800L-18F\SIM\
 
 Project Files:
-    main.c                                                  [30-sep-17 16:15  CRC=908261A8]
+    main.c                                                  [30-sep-17 18:31  CRC=4B3FF732]
     18f2550.h                                               [24-sep-17 14:34  CRC=A8B80131]
     lcd.c                                                   [24-sep-17 14:34  CRC=D1A6378A]
 
-Source signature=DC86D1ED
+Source signature=97446777
 Program memory checksum=0000
 Program memory CRC=0000
-Hex file CRC=E045
+Hex file CRC=1C53
 
 Units:
     main (main)
