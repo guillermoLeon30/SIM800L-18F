@@ -77,7 +77,7 @@ void mensajeSim800(unsigned char *numero, unsigned char *mensaje ){
 void palabra(char *p, char c){
 	char dato = getc();
 	int i = 0;
-
+	
 	while(dato != c){
 		dato = getc();
 	}
