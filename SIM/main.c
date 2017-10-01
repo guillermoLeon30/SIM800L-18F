@@ -44,14 +44,15 @@ void main(){
 	
 	lcd_gotoxy(1,1);
 
-	mensajeSim800(numero, mensaje);
+	//mensajeSim800(numero, mensaje);
 
 	char c;
 
 	while(1)
 	{	
-		c = getc();
-		printf(lcd_putc, "%c", c);
+		printf("AT\r");
+		palabra(dato1, '\r');
+		printf(lcd_putc, "%s", dato1);
 	}
 }
 
@@ -59,8 +60,8 @@ void mensajeSim800(unsigned char *numero, unsigned char *mensaje ){
 	printf("AT\r");
 	palabra(dato1, '\r');
 	printf(lcd_putc, "%s", dato1);
-	//gets(dato1);
-	//printf(lcd_putc, "%s", dato1);
+	gets(dato1);
+	printf(lcd_putc, "%s", dato1);
 	delay_ms(1000);
 	printf("AT+CMGF=1\r");
 	delay_ms(1000);
@@ -78,8 +79,12 @@ void palabra(char *p, char c){
 	int i = 0;
 
 	while(dato != c){
-		p[i] = dato;
 		dato = getc();
+	}
+	dato = 0;
+	while(dato != c){
+		dato = getc();
+		p[i] = dato;
 		i++;
 	}
 }

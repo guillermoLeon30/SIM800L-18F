@@ -33,95 +33,84 @@
 043-044 @sprintf_string
 045     MAIN.c
 046     lcd_init.i
-046-047 mensajeSim800.numero
+046     @PSTRINGC_9600_31766_31767.@SCRATCH1
 047-04A lcd_init.LCD_INIT_STRING
-048-049 mensajeSim800.mensaje
-04A     @PSTRINGCN_9600_31766_31767.P1
-04A     mensajeSim800.@SCRATCH1
-04A     @PSTRINGC_9600_31766_31767.@SCRATCH1
-04A     @PSTRINGR_9600_31766_31767.@SCRATCH1
+047     @PSTRINGC_9600_31766_31767.@SCRATCH2
 04B     lcd_init.@SCRATCH1
-04B     @PSTRINGC_9600_31766_31767.@SCRATCH2
-04B     @PSTRINGCN_9600_31766_31767.@SCRATCH1
-04B     @PSTRINGR_9600_31766_31767.@SCRATCH2
-04C     @PSTRINGCN_9600_31766_31767.@SCRATCH2
-056-057 palabra.p
-056     @PSTRINGR_640.@SCRATCH1
-057     @PSTRINGR_640.@SCRATCH2
-058     lcd_putc.c
-058     palabra.c
-059     @delay_ms1.P1
-059     lcd_gotoxy.x
-059     palabra.dato
-05A     lcd_gotoxy.y
-05A     palabra.i
-05B     lcd_gotoxy.address
-05B     palabra.@SCRATCH1
-05C     lcd_gotoxy.@SCRATCH1
-05C     palabra.@SCRATCH2
-05D     lcd_send_byte.address
-05E     lcd_send_byte.n
-05F     lcd_read_byte.low
-05F     lcd_send_byte.@SCRATCH1
-060     lcd_read_byte.high
-060     lcd_send_nibble.n
-061     lcd_read_byte.@SCRATCH1
+052-053 palabra.p
+052     @PSTRINGR_640.@SCRATCH1
+053     @PSTRINGR_640.@SCRATCH2
+054     lcd_putc.c
+054     palabra.c
+055     palabra.dato
+055     @delay_ms1.P1
+055     lcd_gotoxy.x
+056     palabra.i
+056     lcd_gotoxy.y
+057     lcd_gotoxy.address
+057     palabra.@SCRATCH1
+058     lcd_gotoxy.@SCRATCH1
+058     palabra.@SCRATCH2
+059     lcd_send_byte.address
+05A     lcd_send_byte.n
+05B     lcd_read_byte.low
+05B     lcd_send_byte.@SCRATCH1
+05C     lcd_read_byte.high
+05C     lcd_send_nibble.n
+05D     lcd_read_byte.@SCRATCH1
 F81     lcd
 F8A     lcdlat
 F93     lcdtris
 FB4.6   C1OUT
 FB4.7   C2OUT
-FBB     CCP_2
 FBB     CCP_2_LOW
+FBB     CCP_2
 FBC     CCP_2_HIGH
 FBE     CCP_1
 FBE     CCP_1_LOW
 FBF     CCP_1_HIGH
 FE1-FE2 @READ_PACKED_MEMORY.P1
 FE1-FE2 @WRITE_PACKED_MEMORY.P2
-FE9-FEA @READ_PACKED_MEMORY.P1
-FE9-FEA @READ_PROGRAM_MEMORY.P2
-FE9-FEA @WRITE_PROGRAM_MEMORY.P3
-FE9-FEA @WRITE_PACKED_MEMORY.P4
-FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
-FF6-FF8 @READ_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P1
+FE9-FEA @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @READ_PROGRAM_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
 
 ROM Allocation:
 0000AE  palabra
-0000DC  lcd_read_nibble
-0000E8  lcd_read_byte
-000124  lcd_send_nibble
-00013C  lcd_send_byte
-000176  lcd_gotoxy
-000198  @delay_ms1
-0001C0  lcd_putc
-000210  @PSTRINGR_640
-000234  tratamiento
-000254  @const678.call
-000258  @const681.call
-000264  @const682.call
-000272  lcd_init
-00032E  @PSTRINGC_9600_31766_31767
-000350  @PSTRINGCN_9600_31766_31767
-000372  @PSTRINGR_9600_31766_31767
-000398  @PUTCHARI_BIU_1
-0003A2  mensajeSim800
-00049C  MAIN
-00049C  @cinit1
-0004C0  @cinit2
+0000EE  lcd_read_nibble
+0000FA  lcd_read_byte
+000136  lcd_send_nibble
+00014E  lcd_send_byte
+000188  lcd_gotoxy
+0001AA  @delay_ms1
+0001D2  lcd_putc
+000222  @PSTRINGR_640
+000246  tratamiento
+000266  @const677.call
+00026A  @const680.call
+00026E  @const683.call
+00027A  @const684.call
+000288  lcd_init
+000344  @PSTRINGC_9600_31766_31767
+000368  MAIN
+000368  @cinit1
+00038C  @cinit2
 
 Project Directory:
     D:\PIC\SIM800L-18F\SIM\
 
 Project Files:
-    main.c                                                  [30-sep-17 18:31  CRC=4B3FF732]
+    main.c                                                  [30-sep-17 19:46  CRC=81B89905]
     18f2550.h                                               [24-sep-17 14:34  CRC=A8B80131]
     lcd.c                                                   [24-sep-17 14:34  CRC=D1A6378A]
 
-Source signature=97446777
+Source signature=CDBD094A
 Program memory checksum=0000
 Program memory CRC=0000
-Hex file CRC=1C53
+Hex file CRC=F0D2
 
 Units:
     main (main)

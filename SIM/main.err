@@ -1,14 +1,14 @@
 >>> Warning 208 "main.c" Line 27(1,12): Function not void and does not return a value  tratamiento
 >>> Warning 203 "main.c" Line 51(1,1): Condition always TRUE
->>> Warning 216 "main.c" Line 85(1,2): Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
->>> Warning 216 "main.c" Line 85(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_send_nibble)
->>> Warning 216 "main.c" Line 85(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_send_byte)
->>> Warning 216 "main.c" Line 85(1,2): Interrupts disabled during call to prevent re-entrancy:  (palabra)
->>> Warning 216 "main.c" Line 85(1,2): Interrupts disabled during call to prevent re-entrancy:  (@PSTRINGR_640)
->>> Warning 216 "main.c" Line 85(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_gotoxy)
->>> Warning 216 "main.c" Line 85(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_putc)
+>>> Warning 216 "main.c" Line 90(1,2): Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
+>>> Warning 216 "main.c" Line 90(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_send_nibble)
+>>> Warning 216 "main.c" Line 90(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_send_byte)
+>>> Warning 216 "main.c" Line 90(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_gotoxy)
+>>> Warning 216 "main.c" Line 90(1,2): Interrupts disabled during call to prevent re-entrancy:  (palabra)
+>>> Warning 216 "main.c" Line 90(1,2): Interrupts disabled during call to prevent re-entrancy:  (@PSTRINGR_640)
 >>> Warning 202 "main.c" Line 21(6,11): Variable never used:   dato2
 >>> Warning 202 "main.c" Line 22(6,11): Variable never used:   dato3
-      Memory usage:   ROM=4%      RAM=3% - 5%
+>>> Warning 202 "main.c" Line 49(6,7): Variable never used:   c
+      Memory usage:   ROM=3%      RAM=3% - 5%
       0 Errors,  11 Warnings.
 Build Successful.
