@@ -19,8 +19,8 @@ void mensajeSim800(unsigned char *numero,unsigned char *mensaje );
 char dato1[10];			//Variable para almacena el dato recibido
 char dato2[10];
 char dato3[10];
-char numero[10] = "423245243";
-char mensaje[10] = "Hola";
+char numero[15] = "+593959984110";
+char mensaje[10] = "bomba";
 
 #int_rda			//Vector de interrupción al recibir por el UART
 tratamiento(){	
@@ -41,7 +41,7 @@ void main(){
 	//enable_interrupts(global);		//Habilita interrupciones
 	
 	lcd_gotoxy(1,1);
-
+	printf(lcd_putc, "xxx");
 	mensajeSim800(numero, mensaje);
 
 	while(1)
@@ -53,15 +53,15 @@ void main(){
 void mensajeSim800(unsigned char *numero, unsigned char *mensaje ){
 	printf("AT\r");
 	//gets(dato1);
-	printf(lcd_putc, "%s", dato1);
-	delay_ms(1000);
+	//printf(lcd_putc, "%s", dato1);
+	delay_ms(5000);
 	printf("AT+CMGF=1\r");
-	delay_ms(1000);
-	printf("AT+CMGS=\"%s\"", numero);
+	delay_ms(5000);
+	printf("AT+CMGS=\"%s\",145", numero);
 	printf("\r\n");
-	delay_ms(1000);
+	delay_ms(5000);
 	printf("%s", mensaje);
 	putc(26);
-	delay_ms(1000);
+	delay_ms(5000);
 	printf("\r\n");
 }
