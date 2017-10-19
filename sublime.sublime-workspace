@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"usb",
+				"usb_init_cs"
+			],
+			[
 				"els",
 				"else"
 			],
@@ -510,15 +514,29 @@
 			[
 				"modal",
 				"modalBuscar"
-			],
-			[
-				"fech",
-				"fecha_vencimiento"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "USB/main.c",
+			"settings":
+			{
+				"buffer_size": 835,
+				"encoding": "Western (Windows 1252)",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "USB/usb_desc_cdc.h",
+			"settings":
+			{
+				"buffer_size": 14247,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -561,9 +579,20 @@
 	},
 	"expanded_folders":
 	[
+		"/D/PIC/SIM800L-18F",
+		"/D/PIC/SIM800L-18F/USB"
 	],
 	"file_history":
 	[
+		"/F/config.txt",
+		"/D/PIC/SIM800L-18F/USB/pic18_usb.c",
+		"/D/PIC/SIM800L-18F/USB/usb_cdc.h",
+		"/D/PIC/SIM800L-18F/USB/usb_hw_layer.h",
+		"/D/PIC/SIM800L-18F/USB/main.c",
+		"/C/Program Files (x86)/PICC/Examples/ex_usb_serial2.c",
+		"/C/Program Files (x86)/PICC/Drivers/usb.h",
+		"/C/Program Files (x86)/PICC/Drivers/usb_cdc.h",
+		"/C/Program Files (x86)/PICC/Examples/ex_usb_common.h",
 		"/D/XAMPP/htdocs/geogis/routes/web.php",
 		"/D/PIC/SIM800L-18F/SERIE/main.c",
 		"/D/PIC/SIM800L-18F/SERIE/string.h",
@@ -682,16 +711,7 @@
 		"/D/XAMPP/htdocs/geogis/resources/views/items/mano_de_obra/index/index.blade.php",
 		"/D/XAMPP/htdocs/geogis/resources/views/items/mano_de_obra/index/include/tabla.blade.php",
 		"/D/XAMPP/htdocs/geogis/resources/views/items/materiales/index/index.blade.php",
-		"/D/XAMPP/htdocs/geogis/resources/views/items/mano_de_obra/index/js/jsModalEliminar.blade.php",
-		"/D/XAMPP/htdocs/geogis/resources/views/items/mano_de_obra/index/include/modalEliminar.blade.php",
-		"/D/XAMPP/htdocs/geogis/resources/views/items/mano_de_obra/index/js/jsModalEditar.blade.php",
-		"/D/XAMPP/htdocs/geogis/resources/views/items/mano_de_obra/index/include/modalEditar.blade.php",
-		"/D/XAMPP/htdocs/geogis/resources/views/items/mano_de_obra/index/js/jsModalNuevo.blade.php",
-		"/D/XAMPP/htdocs/geogis/resources/views/items/mano_de_obra/index/include/modalNuevo.blade.php",
-		"/D/XAMPP/htdocs/geogis/resources/views/items/mano_de_obra/index/js/jsPrincipal.blade.php",
-		"/D/XAMPP/htdocs/geogis/resources/views/items/materiales/index/include/modalNuevo.blade.php",
-		"/D/XAMPP/htdocs/geogis/database/migrations/2017_08_26_220236_create_mano_de_obras_table.php",
-		"/D/XAMPP/htdocs/geogis/resources/views/items/materiales/index/include/tabla.blade.php"
+		"/D/XAMPP/htdocs/geogis/resources/views/items/mano_de_obra/index/js/jsModalEliminar.blade.php"
 	],
 	"find":
 	{
@@ -710,6 +730,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"HW_INIT",
 			"is_callable",
 			"gate",
 			"rubro",
@@ -759,8 +780,68 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "USB/main.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 835,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								624,
+								624
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "USB/usb_desc_cdc.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14247,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3163,
+								3163
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 540.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -817,12 +898,16 @@
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 500.0,
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"",
+				"D:\\DOCUMENTOS\\sublime\\geo\\geo.sublime-workspace"
+			]
 		],
-		"width": 0.0
+		"width": 380.0
 	},
 	"select_symbol":
 	{
@@ -841,7 +926,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 341.0,
+	"side_bar_width": 259.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
