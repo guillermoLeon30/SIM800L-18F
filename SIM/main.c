@@ -14,10 +14,9 @@
 #use rs232(Baud=9600,xmit=PIN_C6, rcv=PIN_C7)
 #use fast_io (C)
 
-void palabra(char *p, char c);
 void mensajeSim800(unsigned char *numero,unsigned char *mensaje );
 
-char dato1[1];			//Variable para almacena el dato recibido
+char dato1[10];			//Variable para almacena el dato recibido
 char dato2[10];
 char dato3[10];
 char numero[10] = "423245243";
@@ -25,14 +24,13 @@ char mensaje[10] = "Hola";
 
 #int_rda			//Vector de interrupción al recibir por el UART
 tratamiento(){	
-	//disable_interrupts(INT_RDA);
+	disable_interrupts(INT_RDA);
 	//dato = getc();	//Lee el dato recibido
-	palabra(dato1, '\r');
-	//gets(dato1);
+	gets(dato1);
 	lcd_putc('\f');
-	printf(lcd_putc, "%s", dato1);
+	printf(lcd_putc, "%s", dato1 );
 	
-	//enable_interrupts(INT_RDA);		//Activa interrupción en la recepción
+	enable_interrupts(INT_RDA);		//Activa interrupción en la recepción
 }	
 
 void main(){
@@ -44,23 +42,17 @@ void main(){
 	
 	lcd_gotoxy(1,1);
 
-	//mensajeSim800(numero, mensaje);
-
-	char c;
+	mensajeSim800(numero, mensaje);
 
 	while(1)
 	{	
-		printf("AT\r");
-		palabra(dato1, '\r');
-		printf(lcd_putc, "%s", dato1);
+		//printf(lcd_putc, "%s\n", dato );	
 	}
 }
 
 void mensajeSim800(unsigned char *numero, unsigned char *mensaje ){
 	printf("AT\r");
-	palabra(dato1, '\r');
-	printf(lcd_putc, "%s", dato1);
-	gets(dato1);
+	//gets(dato1);
 	printf(lcd_putc, "%s", dato1);
 	delay_ms(1000);
 	printf("AT+CMGF=1\r");
@@ -72,6 +64,7 @@ void mensajeSim800(unsigned char *numero, unsigned char *mensaje ){
 	putc(26);
 	delay_ms(1000);
 	printf("\r\n");
+<<<<<<< HEAD
 }
 
 void palabra(char *p, char c){
@@ -87,4 +80,6 @@ void palabra(char *p, char c){
 		p[i] = dato;
 		i++;
 	}
+=======
+>>>>>>> ec50519f730513d4a7e2c778db22c0cd21667497
 }
